@@ -1,0 +1,627 @@
+-- Flattened Boolean FSM model  generated from test.smv
+-- Dumped cwd->layers are: model model_bool determ determ_bool __TempLayer_0 
+
+MODULE main
+-- Input variables from layer 'model'
+-- Input variables from layer 'model_bool'
+-- Input variables from layer 'determ'
+-- Input variables from layer 'determ_bool'
+-- Input variables from layer '__TempLayer_0'
+-- State variables from layer 'model'
+VAR
+elevator.button1.pressed : boolean;
+elevator.button2.pressed : boolean;
+elevator.button3.pressed : boolean;
+elevator.buttonOpenDoor.pressed : boolean;
+elevator.moving : boolean;
+
+VAR
+elevator.waiting : boolean;
+VAR
+Floor1btn.requestButton.pressed : boolean;
+VAR
+Floor2btn.requestButton.pressed : boolean;
+VAR
+Floor3btn.requestButton.pressed : boolean;
+VAR
+ctrl.resetFloor1btn : boolean;
+ctrl.resetFloor2btn : boolean;
+ctrl.resetFloor3btn : boolean;
+ctrl.resetButton1 : boolean;
+ctrl.resetButton2 : boolean;
+ctrl.resetButton3 : boolean;
+ctrl.resetButtonOpenDoor : boolean;
+
+VAR
+ctrl.last_dir : boolean;
+ctrl.prev_direction_up : boolean;
+
+-- State variables from layer 'model_bool'
+VAR
+elevator.position.2 : boolean;
+elevator.position.1 : boolean;
+elevator.position.0 : boolean;
+elevator.move_counter.2 : boolean;
+elevator.move_counter.1 : boolean;
+elevator.move_counter.0 : boolean;
+Floor1btn.location.1 : boolean;
+Floor1btn.location.0 : boolean;
+Floor2btn.location.1 : boolean;
+Floor2btn.location.0 : boolean;
+Floor3btn.location.1 : boolean;
+Floor3btn.location.0 : boolean;
+door.status.0 : boolean;
+door.door_counter.2 : boolean;
+door.door_counter.1 : boolean;
+door.door_counter.0 : boolean;
+ctrl.move_cmd.2 : boolean;
+ctrl.move_cmd.1 : boolean;
+ctrl.move_cmd.0 : boolean;
+ctrl.door_action.1 : boolean;
+ctrl.door_action.0 : boolean;
+
+-- State variables from layer 'determ'
+-- State variables from layer 'determ_bool'
+-- State variables from layer '__TempLayer_0'
+-- Frozen variables from layer 'model'
+-- Frozen variables from layer 'model_bool'
+-- Frozen variables from layer 'determ'
+-- Frozen variables from layer 'determ_bool'
+-- Frozen variables from layer '__TempLayer_0'
+
+INIT
+ __expr0
+
+INIT
+ __expr1
+
+INIT
+ __expr2
+
+INIT
+ __expr3
+
+INIT
+ __expr4
+
+INIT
+ __expr5
+
+INIT
+ __expr6
+
+INIT
+ __expr7
+
+INIT
+ elevator.waiting
+
+INIT
+ !elevator.move_counter.2
+
+INIT
+ __expr8
+
+INIT
+ __expr9
+
+INIT
+ __expr10
+
+INIT
+ !Floor1btn.location.1
+
+INIT
+ !Floor1btn.location.0
+
+INIT
+ __expr11
+
+INIT
+ Floor2btn.location.1
+
+INIT
+ __expr12
+
+INIT
+ !Floor3btn.location.1
+
+INIT
+ Floor3btn.location.0
+
+INIT
+ __expr13
+
+
+INVAR
+ case
+elevator.position.2 : __expr7;
+TRUE : (__expr6 | __expr7);
+esac
+
+INVAR
+ (__expr8 | __expr9)
+
+INVAR
+ (!Floor1btn.location.1 | !Floor1btn.location.0)
+
+INVAR
+ (!Floor2btn.location.1 | !Floor2btn.location.0)
+
+INVAR
+ (!Floor3btn.location.1 | !Floor3btn.location.0)
+
+INVAR
+ case
+door.door_counter.2 : __expr14;
+TRUE : (__expr15 | __expr14);
+esac
+
+INVAR
+ case
+ctrl.move_cmd.2 : __expr16;
+TRUE : (__expr17 | __expr16);
+esac
+
+INVAR
+ (__expr18 | !ctrl.door_action.0)
+
+INVAR
+ __expr49
+
+INVAR
+ __expr52
+
+INVAR
+ __expr54
+
+INVAR
+ __expr57
+
+INVAR
+ __expr59
+
+INVAR
+ __expr61
+
+INVAR
+ __expr62
+
+INVAR
+ __expr63
+
+INVAR
+ __expr64
+
+INVAR
+ __expr57
+
+INVAR
+ __expr59
+
+INVAR
+ __expr61
+
+INVAR
+ __expr62
+
+INVAR
+ __expr63
+
+INVAR
+ __expr64
+
+INVAR
+ __expr54
+
+INVAR
+ __expr49
+
+INVAR
+ __expr52
+
+
+TRANS
+ __expr66
+
+TRANS
+ __expr67
+
+TRANS
+ __expr68
+
+TRANS
+ __expr66
+
+TRANS
+ case
+ctrl.resetButton2 : !next(elevator.button2.pressed);
+__expr69 : next(elevator.button2.pressed);
+TRUE : __expr1;
+esac
+
+TRANS
+ case
+ctrl.resetButton3 : !next(elevator.button3.pressed);
+__expr70 : next(elevator.button3.pressed);
+TRUE : __expr2;
+esac
+
+TRANS
+ case
+ctrl.resetButtonOpenDoor : !next(elevator.buttonOpenDoor.pressed);
+__expr71 : next(elevator.buttonOpenDoor.pressed);
+TRUE : __expr3;
+esac
+
+TRANS
+ (next(elevator.moving) <-> (__expr46 | (__expr47 | (__expr72 & elevator.moving))))
+
+TRANS
+ case
+__expr46 : case
+__expr21 : (__expr73 & __expr75);
+elevator.position.2 : (__expr73 & case
+elevator.position.1 : __expr75;
+TRUE : next(elevator.position.1);
+esac);
+TRUE : (next(elevator.position.2) & case
+elevator.position.1 : next(elevator.position.1);
+TRUE : (__expr74 & __expr7);
+esac);
+esac;
+__expr47 : case
+__expr19 : (__expr73 & __expr77);
+elevator.position.2 : (__expr73 & case
+elevator.position.1 : next(elevator.position.1);
+TRUE : __expr77;
+esac);
+TRUE : (next(elevator.position.2) & case
+elevator.position.1 : __expr74;
+TRUE : (next(elevator.position.1) & elevator.position.0);
+esac);
+esac;
+elevator.position.2 : (next(elevator.position.2) & case
+elevator.position.1 : next(elevator.position.1);
+TRUE : __expr74;
+esac);
+TRUE : (__expr73 & case
+elevator.position.1 : next(elevator.position.1);
+TRUE : (__expr74 & case
+elevator.position.0 : next(elevator.position.0);
+TRUE : __expr76;
+esac);
+esac);
+esac
+
+TRANS
+ (next(elevator.waiting) <-> (__expr37 | (!__expr46 & (!__expr47 & (!__expr48 & (__expr72 & elevator.waiting))))))
+
+TRANS
+ case
+__expr29 : (__expr78 & (__expr79 & __expr80));
+(elevator.move_counter.2 & (__expr8 & elevator.move_counter.0)) : (next(elevator.move_counter.2) & __expr81);
+(__expr46 | __expr47) : case
+elevator.move_counter.2 : (__expr78 & case
+elevator.move_counter.1 : __expr81;
+TRUE : (next(elevator.move_counter.1) & __expr9);
+esac);
+TRUE : __expr83;
+esac;
+elevator.move_counter.2 : __expr83;
+TRUE : (__expr78 & __expr82);
+esac
+
+TRANS
+ case
+ctrl.resetFloor1btn : !next(Floor1btn.requestButton.pressed);
+__expr84 : next(Floor1btn.requestButton.pressed);
+TRUE : __expr10;
+esac
+
+TRANS
+ !next(Floor1btn.location.1)
+
+TRANS
+ !next(Floor1btn.location.0)
+
+TRANS
+ case
+ctrl.resetFloor2btn : !next(Floor2btn.requestButton.pressed);
+__expr85 : next(Floor2btn.requestButton.pressed);
+TRUE : __expr11;
+esac
+
+TRANS
+ next(Floor2btn.location.1)
+
+TRANS
+ case
+ctrl.resetFloor3btn : !next(Floor3btn.requestButton.pressed);
+__expr86 : next(Floor3btn.requestButton.pressed);
+TRUE : __expr12;
+esac
+
+TRANS
+ !next(Floor3btn.location.1)
+
+TRANS
+ next(Floor3btn.location.0)
+
+TRANS
+ case
+__expr50 : __expr87;
+ctrl.door_action.1 : next(door.status.0);
+__expr51 : case
+door.status.0 : next(door.status.0);
+TRUE : __expr87;
+esac;
+esac
+
+TRANS
+ case
+(__expr88 & (__expr15 & door.door_counter.0)) : (__expr89 & __expr91);
+__expr50 : case
+door.door_counter.2 : (__expr89 & case
+door.door_counter.1 : __expr91;
+TRUE : next(door.door_counter.1);
+esac);
+TRUE : (next(door.door_counter.2) & case
+door.door_counter.1 : next(door.door_counter.1);
+TRUE : (__expr90 & __expr14);
+esac);
+esac;
+TRUE : (__expr89 & (__expr90 & !next(door.door_counter.0)));
+esac
+
+TRANS
+ __expr67
+
+TRANS
+ __expr68
+
+
+FAIRNESS
+ !(elevator.buttonOpenDoor.pressed & __expr13)
+
+
+FAIRNESS
+ !(elevator.moving & elevator.buttonOpenDoor.pressed)
+
+
+
+LTLSPEC
+ G (__expr10 |  F __expr92)
+ &
+ G (__expr11 |  F __expr93)
+ &
+ G (__expr12 |  F __expr94)
+
+-- Symbols introduced by the dumper:
+DEFINE __expr44 := !ctrl.prev_direction_up ;
+
+DEFINE __expr36 := (__expr34 | elevator.buttonOpenDoor.pressed) ;
+
+DEFINE __expr63 := (ctrl.resetButton2 <-> (__expr58 | (__expr20 & __expr53))) ;
+
+DEFINE __expr79 := !next(elevator.move_counter.1) ;
+
+DEFINE __expr54 := (ctrl.resetButtonOpenDoor <-> (elevator.buttonOpenDoor.pressed & __expr53)) ;
+
+DEFINE __expr7 := !elevator.position.0 ;
+
+DEFINE __expr87 := !next(door.status.0) ;
+
+DEFINE __expr29 := (__expr28 & ctrl.move_cmd.1) ;
+
+DEFINE __expr91 := (__expr90 & next(door.door_counter.0)) ;
+
+DEFINE __expr68 := (next(ctrl.prev_direction_up) <-> case
+(__expr39 & __expr20) : __expr45;
+TRUE : ctrl.prev_direction_up;
+esac) ;
+
+DEFINE __expr47 := (ctrl.move_cmd.2 & __expr17) ;
+
+DEFINE __expr57 := (ctrl.resetFloor1btn <-> ((__expr19 & __expr55) | __expr56)) ;
+
+DEFINE __expr80 := !next(elevator.move_counter.0) ;
+
+DEFINE __expr20 := (__expr5 & elevator.position.1) ;
+
+DEFINE __expr93 := (__expr30 & __expr20) ;
+
+DEFINE __expr81 := (__expr79 & next(elevator.move_counter.0)) ;
+
+DEFINE __expr19 := (__expr5 & (__expr6 & __expr7)) ;
+
+DEFINE __expr0 := !elevator.button1.pressed ;
+
+DEFINE __expr75 := (__expr74 & next(elevator.position.0)) ;
+
+DEFINE __expr90 := !next(door.door_counter.1) ;
+
+DEFINE __expr32 := !__expr27 ;
+
+DEFINE __expr22 := (elevator.button1.pressed & __expr19) ;
+
+DEFINE __expr52 := case
+((((__expr38 & __expr25) & __expr27) & __expr26) | ((__expr39 & !__expr34) & elevator.buttonOpenDoor.pressed)) : __expr50;
+((__expr39 & __expr34) & elevator.buttonOpenDoor.pressed) : __expr51;
+(__expr33 & __expr35) : ctrl.door_action.1;
+TRUE : __expr51;
+esac ;
+
+DEFINE __expr33 := (((__expr4 & __expr32) & elevator.waiting) & __expr13) ;
+
+DEFINE __expr61 := (ctrl.resetFloor3btn <-> ((__expr21 & __expr55) | __expr60)) ;
+
+DEFINE __expr26 := !elevator.waiting ;
+
+DEFINE __expr3 := !elevator.buttonOpenDoor.pressed ;
+
+DEFINE __expr13 := !door.status.0 ;
+
+DEFINE __expr41 := ((Floor2btn.requestButton.pressed | elevator.button2.pressed) | __expr40) ;
+
+DEFINE __expr31 := !__expr25 ;
+
+DEFINE __expr28 := !ctrl.move_cmd.2 ;
+
+DEFINE __expr83 := (next(elevator.move_counter.2) & __expr82) ;
+
+DEFINE __expr70 := (elevator.button3.pressed & !ctrl.resetButton3) ;
+
+DEFINE __expr21 := (__expr5 & (__expr6 & elevator.position.0)) ;
+
+DEFINE __expr39 := (((__expr38 & __expr36) & __expr32) & __expr26) ;
+
+DEFINE __expr88 := !door.door_counter.2 ;
+
+DEFINE __expr46 := (__expr28 & (__expr17 & __expr16)) ;
+
+DEFINE __expr24 := (elevator.button3.pressed & __expr21) ;
+
+DEFINE __expr6 := !elevator.position.1 ;
+
+DEFINE __expr94 := (__expr30 & __expr21) ;
+
+DEFINE __expr84 := (Floor1btn.requestButton.pressed & !ctrl.resetFloor1btn) ;
+
+DEFINE __expr85 := (Floor2btn.requestButton.pressed & !ctrl.resetFloor2btn) ;
+
+DEFINE __expr53 := (__expr37 | __expr50) ;
+
+DEFINE __expr86 := (Floor3btn.requestButton.pressed & !ctrl.resetFloor3btn) ;
+
+DEFINE __expr38 := (__expr4 & door.status.0) ;
+
+DEFINE __expr64 := (ctrl.resetButton3 <-> (__expr60 | (__expr21 & __expr53))) ;
+
+DEFINE __expr56 := (__expr19 & ctrl.door_action.1) ;
+
+DEFINE __expr69 := (elevator.button2.pressed & !ctrl.resetButton2) ;
+
+DEFINE __expr59 := (ctrl.resetFloor2btn <-> ((__expr20 & __expr55) | __expr58)) ;
+
+DEFINE __expr35 := (__expr34 & __expr31) ;
+
+DEFINE __expr73 := !next(elevator.position.2) ;
+
+DEFINE __expr4 := !elevator.moving ;
+
+DEFINE __expr96 := !((elevator.moving & elevator.position.2) & !__expr45) ;
+
+DEFINE __expr45 := (((((__expr19 & __expr41) | ((elevator.position.2 & __expr6) & __expr41)) | (__expr20 & __expr42)) | ((__expr20 & __expr43) & __expr44)) | ((elevator.position.2 & elevator.position.1) & __expr40)) ;
+
+DEFINE __expr16 := !ctrl.move_cmd.0 ;
+
+DEFINE __expr77 := (__expr74 & __expr76) ;
+
+DEFINE __expr27 := (__expr25 & __expr26) ;
+
+DEFINE __expr60 := (__expr21 & ctrl.door_action.1) ;
+
+DEFINE __expr37 := (ctrl.move_cmd.2 & ctrl.move_cmd.1) ;
+
+DEFINE __expr67 := (next(ctrl.last_dir) <-> case
+__expr39 : __expr45;
+TRUE : ctrl.last_dir;
+esac) ;
+
+DEFINE __expr48 := (__expr28 & (__expr17 & ctrl.move_cmd.0)) ;
+
+DEFINE __expr78 := !next(elevator.move_counter.2) ;
+
+DEFINE __expr9 := !elevator.move_counter.0 ;
+
+DEFINE __expr62 := (ctrl.resetButton1 <-> (__expr56 | (__expr19 & __expr53))) ;
+
+DEFINE __expr50 := (__expr18 & !ctrl.door_action.0) ;
+
+DEFINE __expr30 := (__expr4 & __expr13) ;
+
+DEFINE __expr14 := !door.door_counter.0 ;
+
+DEFINE __expr65 := (elevator.button1.pressed & !ctrl.resetButton1) ;
+
+DEFINE __expr25 := ((((((Floor1btn.requestButton.pressed & __expr19) | (Floor2btn.requestButton.pressed & __expr20)) | (Floor3btn.requestButton.pressed & __expr21)) | __expr22) | __expr23) | __expr24) ;
+
+DEFINE __expr74 := !next(elevator.position.1) ;
+
+DEFINE __expr49 := case
+((((elevator.moving & door.status.0) & __expr25) & __expr27) & __expr26) : __expr29;
+(((((__expr30 & __expr31) & __expr3) & __expr32) & __expr26) | (((__expr33 & (__expr25 | elevator.buttonOpenDoor.pressed)) & !__expr35) | (__expr33 & !__expr36))) : __expr37;
+(((__expr39 & __expr3) & __expr34) | ((__expr39 & elevator.buttonOpenDoor.pressed) & __expr34)) : case
+__expr45 : __expr46;
+TRUE : __expr47;
+esac;
+((((elevator.moving & door.status.0) & __expr34) & __expr32) & __expr26) : case
+ctrl.last_dir : __expr46;
+TRUE : __expr47;
+esac;
+TRUE : __expr48;
+esac ;
+
+DEFINE __expr66 := case
+ctrl.resetButton1 : !next(elevator.button1.pressed);
+__expr65 : next(elevator.button1.pressed);
+TRUE : __expr0;
+esac ;
+
+DEFINE __expr18 := !ctrl.door_action.1 ;
+
+DEFINE __expr71 := (elevator.buttonOpenDoor.pressed & !ctrl.resetButtonOpenDoor) ;
+
+DEFINE __expr43 := ((Floor1btn.requestButton.pressed | elevator.button1.pressed) & __expr40) ;
+
+DEFINE __expr23 := (elevator.button2.pressed & __expr20) ;
+
+DEFINE __expr2 := !elevator.button3.pressed ;
+
+DEFINE __expr89 := !next(door.door_counter.2) ;
+
+DEFINE __expr51 := (__expr18 & ctrl.door_action.0) ;
+
+DEFINE __expr72 := !__expr29 ;
+
+DEFINE __expr5 := !elevator.position.2 ;
+
+DEFINE __expr92 := (__expr30 & __expr19) ;
+
+DEFINE __expr58 := (__expr20 & ctrl.door_action.1) ;
+
+DEFINE __expr17 := !ctrl.move_cmd.1 ;
+
+DEFINE __expr10 := !Floor1btn.requestButton.pressed ;
+
+DEFINE __expr55 := (__expr50 | __expr37) ;
+
+DEFINE __expr34 := (((((elevator.button1.pressed | elevator.button2.pressed) | elevator.button3.pressed) | Floor1btn.requestButton.pressed) | Floor2btn.requestButton.pressed) | Floor3btn.requestButton.pressed) ;
+
+DEFINE __expr11 := !Floor2btn.requestButton.pressed ;
+
+DEFINE __expr95 := !((elevator.moving & elevator.position.2) & __expr45) ;
+
+DEFINE __expr12 := !Floor3btn.requestButton.pressed ;
+
+DEFINE __expr42 := (!(Floor1btn.requestButton.pressed | elevator.button1.pressed) & __expr40) ;
+
+DEFINE __expr8 := !elevator.move_counter.1 ;
+
+DEFINE __expr76 := !next(elevator.position.0) ;
+
+DEFINE __expr40 := (Floor3btn.requestButton.pressed | elevator.button3.pressed) ;
+
+DEFINE __expr1 := !elevator.button2.pressed ;
+
+DEFINE __expr15 := !door.door_counter.1 ;
+
+DEFINE __expr82 := case
+elevator.move_counter.1 : next(elevator.move_counter.1);
+TRUE : (__expr79 & case
+elevator.move_counter.0 : next(elevator.move_counter.0);
+TRUE : __expr80;
+esac);
+esac ;
+

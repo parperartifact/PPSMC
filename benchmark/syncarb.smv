@@ -1,0 +1,619 @@
+-- Flattened Boolean FSM model  generated from test.smv
+-- Dumped cwd->layers are: model model_bool determ determ_bool __TempLayer_0 
+
+MODULE main
+-- Input variables from layer 'model'
+-- Input variables from layer 'model_bool'
+-- Input variables from layer 'determ'
+-- Input variables from layer 'determ_bool'
+-- Input variables from layer '__TempLayer_0'
+-- State variables from layer 'model'
+VAR
+e30.Persistent : boolean;
+e30.Token : boolean;
+e30.Request : boolean;
+e29.Persistent : boolean;
+e29.Token : boolean;
+e29.Request : boolean;
+e28.Persistent : boolean;
+e28.Token : boolean;
+e28.Request : boolean;
+e27.Persistent : boolean;
+e27.Token : boolean;
+e27.Request : boolean;
+e26.Persistent : boolean;
+e26.Token : boolean;
+e26.Request : boolean;
+e25.Persistent : boolean;
+e25.Token : boolean;
+e25.Request : boolean;
+e24.Persistent : boolean;
+e24.Token : boolean;
+e24.Request : boolean;
+e23.Persistent : boolean;
+e23.Token : boolean;
+e23.Request : boolean;
+e22.Persistent : boolean;
+e22.Token : boolean;
+e22.Request : boolean;
+e21.Persistent : boolean;
+e21.Token : boolean;
+e21.Request : boolean;
+e20.Persistent : boolean;
+e20.Token : boolean;
+e20.Request : boolean;
+e19.Persistent : boolean;
+e19.Token : boolean;
+e19.Request : boolean;
+e18.Persistent : boolean;
+e18.Token : boolean;
+e18.Request : boolean;
+e17.Persistent : boolean;
+e17.Token : boolean;
+e17.Request : boolean;
+e16.Persistent : boolean;
+e16.Token : boolean;
+e16.Request : boolean;
+e15.Persistent : boolean;
+e15.Token : boolean;
+e15.Request : boolean;
+e14.Persistent : boolean;
+e14.Token : boolean;
+e14.Request : boolean;
+e13.Persistent : boolean;
+e13.Token : boolean;
+e13.Request : boolean;
+e12.Persistent : boolean;
+e12.Token : boolean;
+e12.Request : boolean;
+e11.Persistent : boolean;
+e11.Token : boolean;
+e11.Request : boolean;
+e10.Persistent : boolean;
+e10.Token : boolean;
+e10.Request : boolean;
+e9.Persistent : boolean;
+e9.Token : boolean;
+e9.Request : boolean;
+e8.Persistent : boolean;
+e8.Token : boolean;
+e8.Request : boolean;
+e7.Persistent : boolean;
+e7.Token : boolean;
+e7.Request : boolean;
+e6.Persistent : boolean;
+e6.Token : boolean;
+e6.Request : boolean;
+e5.Persistent : boolean;
+e5.Token : boolean;
+e5.Request : boolean;
+e4.Persistent : boolean;
+e4.Token : boolean;
+e4.Request : boolean;
+e3.Persistent : boolean;
+e3.Token : boolean;
+e3.Request : boolean;
+e2.Persistent : boolean;
+e2.Token : boolean;
+e2.Request : boolean;
+e1.Persistent : boolean;
+e1.Token : boolean;
+e1.Request : boolean;
+
+-- State variables from layer 'model_bool'
+-- State variables from layer 'determ'
+-- State variables from layer 'determ_bool'
+-- State variables from layer '__TempLayer_0'
+-- Frozen variables from layer 'model'
+-- Frozen variables from layer 'model_bool'
+-- Frozen variables from layer 'determ'
+-- Frozen variables from layer 'determ_bool'
+-- Frozen variables from layer '__TempLayer_0'
+INIT
+ !e30.Persistent
+
+INIT
+ !e30.Token
+
+INIT
+ !e29.Persistent
+
+INIT
+ !e29.Token
+
+INIT
+ !e28.Persistent
+
+INIT
+ !e28.Token
+
+INIT
+ !e27.Persistent
+
+INIT
+ !e27.Token
+
+INIT
+ !e26.Persistent
+
+INIT
+ !e26.Token
+
+INIT
+ !e25.Persistent
+
+INIT
+ !e25.Token
+
+INIT
+ !e24.Persistent
+
+INIT
+ !e24.Token
+
+INIT
+ !e23.Persistent
+
+INIT
+ !e23.Token
+
+INIT
+ !e22.Persistent
+
+INIT
+ !e22.Token
+
+INIT
+ !e21.Persistent
+
+INIT
+ e21.Token
+
+INIT
+ !e20.Persistent
+
+INIT
+ !e20.Token
+
+INIT
+ !e19.Persistent
+
+INIT
+ !e19.Token
+
+INIT
+ !e18.Persistent
+
+INIT
+ !e18.Token
+
+INIT
+ !e17.Persistent
+
+INIT
+ !e17.Token
+
+INIT
+ !e16.Persistent
+
+INIT
+ !e16.Token
+
+INIT
+ !e15.Persistent
+
+INIT
+ !e15.Token
+
+INIT
+ !e14.Persistent
+
+INIT
+ !e14.Token
+
+INIT
+ !e13.Persistent
+
+INIT
+ !e13.Token
+
+INIT
+ !e12.Persistent
+
+INIT
+ !e12.Token
+
+INIT
+ !e11.Persistent
+
+INIT
+ e11.Token
+
+INIT
+ !e10.Persistent
+
+INIT
+ !e10.Token
+
+INIT
+ !e9.Persistent
+
+INIT
+ !e9.Token
+
+INIT
+ !e8.Persistent
+
+INIT
+ !e8.Token
+
+INIT
+ !e7.Persistent
+
+INIT
+ !e7.Token
+
+INIT
+ !e6.Persistent
+
+INIT
+ !e6.Token
+
+INIT
+ !e5.Persistent
+
+INIT
+ !e5.Token
+
+INIT
+ !e4.Persistent
+
+INIT
+ !e4.Token
+
+INIT
+ !e3.Persistent
+
+INIT
+ !e3.Token
+
+INIT
+ !e2.Persistent
+
+INIT
+ !e2.Token
+
+INIT
+ !e1.Persistent
+
+INIT
+ e1.Token
+
+TRANS
+ (next(e26.Token) <-> e25.Token)
+
+TRANS
+ (next(e25.Persistent) <-> __expr7)
+
+TRANS
+ (next(e30.Persistent) <-> __expr0)
+
+TRANS
+ __expr1
+
+TRANS
+ __expr2
+
+TRANS
+ __expr1
+
+TRANS
+ (next(e29.Persistent) <-> __expr3)
+
+TRANS
+ (next(e29.Token) <-> e28.Token)
+
+TRANS
+ (next(e28.Persistent) <-> __expr4)
+
+TRANS
+ (next(e28.Token) <-> e27.Token)
+
+TRANS
+ (next(e27.Persistent) <-> __expr5)
+
+TRANS
+ (next(e27.Token) <-> e26.Token)
+
+TRANS
+ (next(e26.Persistent) <-> __expr6)
+
+TRANS
+ (next(e25.Token) <-> e24.Token)
+
+TRANS
+ (next(e24.Persistent) <-> __expr8)
+
+TRANS
+ (next(e24.Token) <-> e23.Token)
+
+TRANS
+ (next(e23.Persistent) <-> __expr9)
+
+TRANS
+ (next(e23.Token) <-> e22.Token)
+
+TRANS
+ (next(e22.Persistent) <-> __expr10)
+
+TRANS
+ (next(e22.Token) <-> e21.Token)
+
+TRANS
+ (next(e21.Persistent) <-> __expr11)
+
+TRANS
+ (next(e21.Token) <-> e20.Token)
+
+TRANS
+ (next(e20.Persistent) <-> __expr12)
+
+TRANS
+ (next(e20.Token) <-> e19.Token)
+
+TRANS
+ (next(e19.Persistent) <-> __expr13)
+
+TRANS
+ (next(e19.Token) <-> e18.Token)
+
+TRANS
+ (next(e18.Persistent) <-> __expr14)
+
+TRANS
+ (next(e18.Token) <-> e17.Token)
+
+TRANS
+ (next(e17.Persistent) <-> __expr15)
+
+TRANS
+ (next(e17.Token) <-> e16.Token)
+
+TRANS
+ (next(e16.Persistent) <-> __expr16)
+
+TRANS
+ (next(e16.Token) <-> e15.Token)
+
+TRANS
+ (next(e15.Persistent) <-> __expr17)
+
+TRANS
+ (next(e15.Token) <-> e14.Token)
+
+TRANS
+ (next(e14.Persistent) <-> __expr18)
+
+TRANS
+ (next(e14.Token) <-> e13.Token)
+
+TRANS
+ (next(e13.Persistent) <-> __expr19)
+
+TRANS
+ (next(e13.Token) <-> e12.Token)
+
+TRANS
+ (next(e12.Persistent) <-> __expr20)
+
+TRANS
+ (next(e12.Token) <-> e11.Token)
+
+TRANS
+ (next(e11.Persistent) <-> __expr21)
+
+TRANS
+ (next(e11.Token) <-> e10.Token)
+
+TRANS
+ (next(e10.Persistent) <-> __expr22)
+
+TRANS
+ (next(e10.Token) <-> e9.Token)
+
+TRANS
+ (next(e9.Persistent) <-> __expr23)
+
+TRANS
+ (next(e9.Token) <-> e8.Token)
+
+TRANS
+ (next(e8.Persistent) <-> __expr24)
+
+TRANS
+ (next(e8.Token) <-> e7.Token)
+
+TRANS
+ (next(e7.Persistent) <-> __expr25)
+
+TRANS
+ (next(e7.Token) <-> e6.Token)
+
+TRANS
+ (next(e6.Persistent) <-> __expr26)
+
+TRANS
+ (next(e6.Token) <-> e5.Token)
+
+TRANS
+ (next(e5.Persistent) <-> __expr27)
+
+TRANS
+ (next(e5.Token) <-> e4.Token)
+
+TRANS
+ (next(e4.Persistent) <-> __expr28)
+
+TRANS
+ (next(e4.Token) <-> e3.Token)
+
+TRANS
+ (next(e3.Persistent) <-> __expr29)
+
+TRANS
+ (next(e3.Token) <-> e2.Token)
+
+TRANS
+ (next(e2.Persistent) <-> __expr30)
+
+TRANS
+ (next(e2.Token) <-> e1.Token)
+
+TRANS
+ (next(e1.Persistent) <-> __expr31)
+
+TRANS
+ __expr2
+
+
+
+LTLSPEC
+ G ((!__expr63 | e1.Request) &  F (__expr64 | __expr63))
+
+-- Symbols introduced by the dumper:
+DEFINE __expr41 := (e22.Persistent & e22.Token) ;
+
+DEFINE __expr4 := (e28.Request & (e28.Persistent | e28.Token)) ;
+
+DEFINE __expr38 := (e25.Persistent & e25.Token) ;
+
+DEFINE __expr35 := (e28.Persistent & e28.Token) ;
+
+DEFINE __expr62 := !(((((((((((((((((((((((((((((__expr33 | __expr34) | __expr35) | __expr36) | __expr37) | __expr38) | __expr39) | __expr40) | __expr41) | __expr42) | __expr43) | __expr44) | __expr45) | __expr46) | __expr47) | __expr48) | __expr49) | __expr50) | __expr51) | __expr52) | __expr53) | __expr54) | __expr55) | __expr56) | __expr57) | __expr58) | __expr59) | __expr60) | __expr61) | __expr32) ;
+
+DEFINE __expr28 := (e4.Request & (e4.Persistent | e4.Token)) ;
+
+DEFINE __expr64 := !e1.Request ;
+
+DEFINE __expr23 := (e9.Request & (e9.Persistent | e9.Token)) ;
+
+DEFINE __expr18 := (e14.Request & (e14.Persistent | e14.Token)) ;
+
+DEFINE __expr67 := !e4.Request ;
+
+DEFINE __expr13 := (e19.Request & (e19.Persistent | e19.Token)) ;
+
+DEFINE __expr61 := (e2.Persistent & e2.Token) ;
+
+DEFINE __expr8 := (e24.Request & (e24.Persistent | e24.Token)) ;
+
+DEFINE __expr58 := (e5.Persistent & e5.Token) ;
+
+DEFINE __expr3 := (e29.Request & (e29.Persistent | e29.Token)) ;
+
+DEFINE __expr55 := (e8.Persistent & e8.Token) ;
+
+DEFINE __expr52 := (e11.Persistent & e11.Token) ;
+
+DEFINE __expr48 := (e15.Persistent & e15.Token) ;
+
+DEFINE __expr49 := (e14.Persistent & e14.Token) ;
+
+DEFINE __expr45 := (e18.Persistent & e18.Token) ;
+
+DEFINE __expr27 := (e5.Request & (e5.Persistent | e5.Token)) ;
+
+DEFINE __expr2 := (next(e1.Token) <-> e30.Token) ;
+
+DEFINE __expr22 := (e10.Request & (e10.Persistent | e10.Token)) ;
+
+DEFINE __expr42 := (e21.Persistent & e21.Token) ;
+
+DEFINE __expr17 := (e15.Request & (e15.Persistent | e15.Token)) ;
+
+DEFINE __expr39 := (e24.Persistent & e24.Token) ;
+
+DEFINE __expr12 := (e20.Request & (e20.Persistent | e20.Token)) ;
+
+DEFINE __expr1 := (next(e30.Token) <-> e29.Token) ;
+
+DEFINE __expr63 := (e1.Request & (__expr32 | __expr62)) ;
+
+DEFINE __expr36 := (e27.Persistent & e27.Token) ;
+
+DEFINE __expr7 := (e25.Request & (e25.Persistent | e25.Token)) ;
+
+DEFINE __expr32 := (e1.Persistent & e1.Token) ;
+
+DEFINE __expr0 := (e30.Request & (e30.Persistent | e30.Token)) ;
+
+DEFINE __expr66 := !e3.Request ;
+
+DEFINE __expr31 := (e1.Request & (e1.Persistent | e1.Token)) ;
+
+DEFINE __expr26 := (e6.Request & (e6.Persistent | e6.Token)) ;
+
+DEFINE __expr59 := (e4.Persistent & e4.Token) ;
+
+DEFINE __expr21 := (e11.Request & (e11.Persistent | e11.Token)) ;
+
+DEFINE __expr16 := (e16.Request & (e16.Persistent | e16.Token)) ;
+
+DEFINE __expr56 := (e7.Persistent & e7.Token) ;
+
+DEFINE __expr11 := (e21.Request & (e21.Persistent | e21.Token)) ;
+
+DEFINE __expr53 := (e10.Persistent & e10.Token) ;
+
+DEFINE __expr6 := (e26.Request & (e26.Persistent | e26.Token)) ;
+
+DEFINE __expr50 := (e13.Persistent & e13.Token) ;
+
+DEFINE __expr46 := (e17.Persistent & e17.Token) ;
+
+DEFINE __expr43 := (e20.Persistent & e20.Token) ;
+
+DEFINE __expr40 := (e23.Persistent & e23.Token) ;
+
+DEFINE __expr30 := (e2.Request & (e2.Persistent | e2.Token)) ;
+
+DEFINE __expr25 := (e7.Request & (e7.Persistent | e7.Token)) ;
+
+DEFINE __expr37 := (e26.Persistent & e26.Token) ;
+
+DEFINE __expr20 := (e12.Request & (e12.Persistent | e12.Token)) ;
+
+DEFINE __expr34 := (e29.Persistent & e29.Token) ;
+
+DEFINE __expr15 := (e17.Request & (e17.Persistent | e17.Token)) ;
+
+DEFINE __expr10 := (e22.Request & (e22.Persistent | e22.Token)) ;
+
+DEFINE __expr65 := !e2.Request ;
+
+DEFINE __expr33 := (e30.Persistent & e30.Token) ;
+
+DEFINE __expr5 := (e27.Request & (e27.Persistent | e27.Token)) ;
+
+DEFINE __expr60 := (e3.Persistent & e3.Token) ;
+
+DEFINE __expr57 := (e6.Persistent & e6.Token) ;
+
+DEFINE __expr29 := (e3.Request & (e3.Persistent | e3.Token)) ;
+
+DEFINE __expr54 := (e9.Persistent & e9.Token) ;
+
+DEFINE __expr24 := (e8.Request & (e8.Persistent | e8.Token)) ;
+
+DEFINE __expr19 := (e13.Request & (e13.Persistent | e13.Token)) ;
+
+DEFINE __expr51 := (e12.Persistent & e12.Token) ;
+
+DEFINE __expr47 := (e16.Persistent & e16.Token) ;
+
+DEFINE __expr14 := (e18.Request & (e18.Persistent | e18.Token)) ;
+
+DEFINE __expr44 := (e19.Persistent & e19.Token) ;
+
+DEFINE __expr9 := (e23.Request & (e23.Persistent | e23.Token)) ;
+

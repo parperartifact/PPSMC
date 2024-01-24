@@ -1,0 +1,1487 @@
+-- Flattened Boolean FSM model  generated from bc57-test.smv
+-- Dumped cwd->layers are: model model_bool determ determ_bool __TempLayer_0 
+
+MODULE main
+-- Input variables from layer 'model'
+-- Input variables from layer 'model_bool'
+-- Input variables from layer 'determ'
+-- Input variables from layer 'determ_bool'
+-- Input variables from layer '__TempLayer_0'
+-- State variables from layer 'model'
+VAR
+repeat : boolean;
+VAR
+again : boolean;
+VAR
+log1.CR0307 : boolean;
+log1.CR0308 : boolean;
+log1.CR0299 : boolean;
+log1.CR0075 : boolean;
+log1.CR0048 : boolean;
+log1.CR0261 : boolean;
+log1.f : boolean;
+log1.CR0270 : boolean;
+log1.CR0069 : boolean;
+log1.TS0272l : boolean;
+log1.CR0085 : boolean;
+log1.TS0274l : boolean;
+log1.CR0089 : boolean;
+log1.CR0082 : boolean;
+log1.m : boolean;
+log1.TT0300l : boolean;
+log1.CR0309 : boolean;
+log1.o : boolean;
+log1.CR0101 : boolean;
+log1.p : boolean;
+log1.change : boolean;
+log2.CR0065 : boolean;
+log2.q : boolean;
+log2.CR0106 : boolean;
+log2.TT0276l : boolean;
+log2.TS0297l : boolean;
+log2.TT0262l : boolean;
+log2.TS0271l : boolean;
+log2.CR0077 : boolean;
+log2.CR0081 : boolean;
+log2.CR0080 : boolean;
+log2.ab : boolean;
+log2.CR0278 : boolean;
+log2.ac : boolean;
+log2.change : boolean;
+log3.CR0287 : boolean;
+log3.CR0285 : boolean;
+log3.change : boolean;
+ti0276.t : boolean;
+VAR
+ti0297.done : boolean;
+ti0262.t : boolean;
+ti0271.t : boolean;
+ti0272.t : boolean;
+ti0274.t : boolean;
+ti0300.t : boolean;
+bc56.working : boolean;
+wghgat.z : boolean;
+VAR
+mixgat.z : boolean;
+eirich.material : boolean;
+eirich.watsol : boolean;
+eirich.ms34 : boolean;
+eirich.mf34 : boolean;
+eirich.m7 : boolean;
+eirich.m9 : boolean;
+flare.air_sol : boolean;
+flare.pilot_valve : boolean;
+flare.main_valve : boolean;
+flare.flame : boolean;
+bc57.working : boolean;
+fail0148h : boolean;
+fail0148l : boolean;
+fail0149h : boolean;
+fail0149l : boolean;
+
+-- State variables from layer 'model_bool'
+VAR
+step.2 : boolean;
+step.1 : boolean;
+step.0 : boolean;
+opstep.4 : boolean;
+opstep.3 : boolean;
+opstep.2 : boolean;
+opstep.1 : boolean;
+opstep.0 : boolean;
+ti0297.t.1 : boolean;
+ti0297.t.0 : boolean;
+wghhop.h.2 : boolean;
+wghhop.h.1 : boolean;
+wghhop.h.0 : boolean;
+
+-- State variables from layer 'determ'
+-- State variables from layer 'determ_bool'
+-- State variables from layer '__TempLayer_0'
+-- Frozen variables from layer 'model'
+-- Frozen variables from layer 'model_bool'
+-- Frozen variables from layer 'determ'
+-- Frozen variables from layer 'determ_bool'
+-- Frozen variables from layer '__TempLayer_0'
+INIT
+ step.2
+
+INIT
+ __expr0
+
+INIT
+ __expr1
+
+INIT
+ __expr2
+
+INIT
+ __expr3
+
+INIT
+ __expr4
+
+INIT
+ __expr5
+
+INIT
+ __expr6
+
+INIT
+ !log1.CR0307
+
+INIT
+ !log1.CR0308
+
+INIT
+ !log1.CR0299
+
+INIT
+ !log1.CR0075
+
+INIT
+ __expr7
+
+INIT
+ !log1.CR0261
+
+INIT
+ !log1.CR0270
+
+INIT
+ !log1.CR0069
+
+INIT
+ !log1.TS0272l
+
+INIT
+ !log1.CR0085
+
+INIT
+ !log1.TS0274l
+
+INIT
+ !log1.CR0089
+
+INIT
+ !log1.CR0082
+
+INIT
+ !log1.TT0300l
+
+INIT
+ !log1.CR0309
+
+INIT
+ __expr8
+
+INIT
+ !log1.change
+
+INIT
+ !log2.CR0065
+
+INIT
+ !log2.CR0106
+
+INIT
+ !log2.TT0276l
+
+INIT
+ __expr9
+
+INIT
+ !log2.TT0262l
+
+INIT
+ !log2.TS0271l
+
+INIT
+ !log2.CR0077
+
+INIT
+ !log2.CR0081
+
+INIT
+ __expr10
+
+INIT
+ __expr11
+
+INIT
+ !log2.change
+
+INIT
+ !log3.CR0287
+
+INIT
+ __expr12
+
+INIT
+ !log3.change
+
+INIT
+ __expr13
+
+INIT
+ __expr14
+
+INIT
+ __expr15
+
+INIT
+ __expr16
+
+INIT
+ __expr17
+
+INIT
+ !ti0271.t
+
+INIT
+ !ti0272.t
+
+INIT
+ !ti0274.t
+
+INIT
+ !ti0300.t
+
+INIT
+ !bc56.working
+
+INIT
+ __expr18
+
+INIT
+ !wghhop.h.2
+
+INIT
+ !wghhop.h.1
+
+INIT
+ __expr19
+
+INIT
+ __expr20
+
+INIT
+ !eirich.material
+
+INIT
+ !eirich.watsol
+
+INIT
+ !eirich.ms34
+
+INIT
+ !eirich.mf34
+
+INIT
+ !eirich.m7
+
+INIT
+ !eirich.m9
+
+INIT
+ !flare.air_sol
+
+INIT
+ !flare.pilot_valve
+
+INIT
+ !flare.main_valve
+
+INIT
+ !flare.flame
+
+INIT
+ !bc57.working
+
+INIT
+ !fail0148h
+
+INIT
+ !fail0148l
+
+INIT
+ !fail0149h
+
+INIT
+ !fail0149l
+
+
+INVAR
+ case
+step.2 : __expr21;
+TRUE : (__expr0 | __expr21);
+esac
+
+INVAR
+ case
+__expr22 : __expr6;
+TRUE : (__expr5 | __expr6);
+esac
+
+INVAR
+ (__expr14 | __expr15)
+
+INVAR
+ (repeat <-> __expr23)
+
+INVAR
+ __expr32
+
+INVAR
+ __expr40
+
+INVAR
+ __expr49
+
+INVAR
+ __expr50
+
+INVAR
+ __expr52
+
+INVAR
+ __expr32
+
+INVAR
+ __expr54
+
+INVAR
+ __expr54
+
+INVAR
+ __expr55
+
+INVAR
+ __expr55
+
+INVAR
+ __expr40
+
+INVAR
+ __expr49
+
+INVAR
+ __expr50
+
+INVAR
+ __expr52
+
+
+TRANS
+ __expr64
+
+TRANS
+ (__expr66 | (next(fail0148h) <-> fail0148h))
+
+TRANS
+ (!(__expr66 & __expr67) | !next(fail0148h))
+
+TRANS
+ (!((__expr66 & !__expr67) & fail0148h) | next(fail0148h))
+
+TRANS
+ (__expr66 | (next(fail0148l) <-> fail0148l))
+
+TRANS
+ (!(__expr66 & __expr68) | !next(fail0148l))
+
+TRANS
+ (!((__expr66 & !__expr68) & fail0148l) | next(fail0148l))
+
+TRANS
+ (__expr66 | (next(fail0149h) <-> fail0149h))
+
+TRANS
+ (!(__expr66 & __expr69) | !next(fail0149h))
+
+TRANS
+ (!((__expr66 & !__expr69) & fail0149h) | next(fail0149h))
+
+TRANS
+ (__expr66 | (next(fail0149l) <-> fail0149l))
+
+TRANS
+ (!(__expr66 & __expr70) | !next(fail0149l))
+
+TRANS
+ (!((__expr66 & !__expr70) & fail0149l) | next(fail0149l))
+
+TRANS
+ __expr74
+
+TRANS
+ __expr113
+
+TRANS
+ __expr114
+
+TRANS
+ __expr115
+
+TRANS
+ __expr116
+
+TRANS
+ __expr118
+
+TRANS
+ __expr119
+
+TRANS
+ __expr120
+
+TRANS
+ __expr121
+
+TRANS
+ __expr122
+
+TRANS
+ __expr123
+
+TRANS
+ __expr124
+
+TRANS
+ __expr125
+
+TRANS
+ __expr126
+
+TRANS
+ __expr127
+
+TRANS
+ __expr128
+
+TRANS
+ __expr129
+
+TRANS
+ __expr130
+
+TRANS
+ __expr131
+
+TRANS
+ __expr132
+
+TRANS
+ __expr133
+
+TRANS
+ __expr135
+
+TRANS
+ __expr136
+
+TRANS
+ __expr137
+
+TRANS
+ __expr138
+
+TRANS
+ __expr140
+
+TRANS
+ __expr142
+
+TRANS
+ __expr143
+
+TRANS
+ __expr144
+
+TRANS
+ __expr145
+
+TRANS
+ __expr147
+
+TRANS
+ __expr149
+
+TRANS
+ __expr150
+
+TRANS
+ __expr151
+
+TRANS
+ __expr156
+
+TRANS
+ __expr157
+
+TRANS
+ __expr158
+
+TRANS
+ __expr159
+
+TRANS
+ __expr160
+
+TRANS
+ __expr161
+
+TRANS
+ __expr162
+
+TRANS
+ __expr163
+
+TRANS
+ __expr164
+
+TRANS
+ __expr173
+
+TRANS
+ __expr174
+
+TRANS
+ __expr175
+
+TRANS
+ __expr176
+
+TRANS
+ __expr177
+
+TRANS
+ __expr178
+
+TRANS
+ __expr179
+
+TRANS
+ __expr180
+
+TRANS
+ __expr181
+
+TRANS
+ __expr182
+
+TRANS
+ __expr183
+
+TRANS
+ __expr185
+
+TRANS
+ __expr186
+
+TRANS
+ __expr64
+
+TRANS
+ __expr74
+
+TRANS
+ __expr113
+
+TRANS
+ __expr114
+
+TRANS
+ __expr115
+
+TRANS
+ __expr116
+
+TRANS
+ __expr118
+
+TRANS
+ __expr119
+
+TRANS
+ __expr120
+
+TRANS
+ __expr121
+
+TRANS
+ __expr122
+
+TRANS
+ __expr123
+
+TRANS
+ __expr124
+
+TRANS
+ __expr125
+
+TRANS
+ __expr126
+
+TRANS
+ __expr127
+
+TRANS
+ __expr128
+
+TRANS
+ __expr129
+
+TRANS
+ __expr130
+
+TRANS
+ __expr131
+
+TRANS
+ __expr132
+
+TRANS
+ __expr133
+
+TRANS
+ __expr135
+
+TRANS
+ __expr136
+
+TRANS
+ __expr137
+
+TRANS
+ __expr138
+
+TRANS
+ __expr140
+
+TRANS
+ __expr142
+
+TRANS
+ __expr143
+
+TRANS
+ __expr144
+
+TRANS
+ __expr145
+
+TRANS
+ __expr147
+
+TRANS
+ __expr149
+
+TRANS
+ __expr150
+
+TRANS
+ __expr151
+
+TRANS
+ __expr156
+
+TRANS
+ __expr157
+
+TRANS
+ __expr158
+
+TRANS
+ __expr159
+
+TRANS
+ __expr160
+
+TRANS
+ __expr161
+
+TRANS
+ __expr162
+
+TRANS
+ __expr163
+
+TRANS
+ __expr164
+
+TRANS
+ __expr173
+
+TRANS
+ __expr174
+
+TRANS
+ __expr175
+
+TRANS
+ __expr176
+
+TRANS
+ __expr177
+
+TRANS
+ __expr178
+
+TRANS
+ __expr179
+
+TRANS
+ __expr180
+
+TRANS
+ __expr181
+
+TRANS
+ __expr182
+
+TRANS
+ __expr183
+
+TRANS
+ __expr185
+
+TRANS
+ __expr186
+
+
+FAIRNESS
+ __expr1
+
+
+FAIRNESS
+ ti0297.done
+
+LTLSPEC
+((((( G ( F __expr75) |  G ( F __expr43)) |  G ( F __expr47)) |  G ( F __expr91)) |  G ( F __expr37)) |  G ( F __expr30))
+
+-- Symbols introduced by the dumper:
+DEFINE __expr177 := (next(eirich.ms34) <-> case
+__expr65 : eirich.ms34;
+TRUE : log2.CR0077;
+esac) ;
+
+DEFINE __expr167 := (next(wghhop.h.1) & __expr166) ;
+
+DEFINE __expr160 := (next(ti0272.t) <-> (log1.TS0272l & case
+__expr71 : ti0272.t;
+TRUE : log1.TS0272l;
+esac)) ;
+
+DEFINE __expr125 := (next(log1.TS0274l) <-> case
+__expr60 : eirich.m7;
+TRUE : log1.TS0274l;
+esac) ;
+
+DEFINE __expr5 := !opstep.1 ;
+
+DEFINE __expr93 := (__expr76 & __expr92) ;
+
+DEFINE __expr91 := (opstep.4 & __expr89) ;
+
+DEFINE __expr71 := (step.2 | (step.1 | step.0)) ;
+
+DEFINE __expr9 := !log2.TS0297l ;
+
+DEFINE __expr209 := case
+opstep.4 : case
+opstep.3 : __expr28;
+opstep.2 : opstep.1;
+TRUE : __expr104;
+esac;
+opstep.3 : __expr28;
+TRUE : __expr105;
+esac ;
+
+DEFINE __expr188 := (__expr57 & __expr84) ;
+
+DEFINE __expr165 := !next(wghhop.h.0) ;
+
+DEFINE __expr39 := ((bc57.working | fail0149h) & !fail0149l) ;
+
+DEFINE __expr2 := !opstep.4 ;
+
+DEFINE __expr192 := (__expr57 & __expr87) ;
+
+DEFINE __expr203 := (__expr4 | __expr5) ;
+
+DEFINE __expr45 := (opstep.2 & __expr5) ;
+
+DEFINE __expr118 := (next(log1.CR0075) <-> case
+__expr60 : (ti0276.t | (log1.CR0075 & __expr117));
+TRUE : log1.CR0075;
+esac) ;
+
+DEFINE __expr132 := (next(log2.CR0065) <-> case
+__expr62 : log2.q;
+TRUE : log2.CR0065;
+esac) ;
+
+DEFINE __expr110 := (next(opstep.2) & __expr109) ;
+
+DEFINE __expr102 := (opstep.4 & __expr100) ;
+
+DEFINE __expr199 := case
+opstep.3 : (opstep.2 | opstep.1);
+opstep.2 : opstep.1;
+TRUE : __expr193;
+esac ;
+
+DEFINE __expr95 := ((__expr2 & __expr36) & mixgat.z) ;
+
+DEFINE __expr25 := (__expr4 & __expr24) ;
+
+DEFINE __expr21 := !step.0 ;
+
+DEFINE __expr119 := (next(log1.CR0048) <-> case
+__expr60 : ((__expr44 | log1.CR0048) & __expr16);
+TRUE : log1.CR0048;
+esac) ;
+
+DEFINE __expr34 := (__expr3 & __expr33) ;
+
+DEFINE __expr202 := (opstep.1 | __expr6) ;
+
+DEFINE __expr111 := case
+opstep.3 : (next(opstep.3) & case
+opstep.2 : __expr110;
+TRUE : (__expr77 & __expr109);
+esac);
+TRUE : (__expr76 & case
+opstep.2 : __expr110;
+TRUE : (__expr77 & case
+opstep.1 : next(opstep.1);
+TRUE : (__expr78 & case
+opstep.0 : next(opstep.0);
+TRUE : __expr79;
+esac);
+esac);
+esac);
+esac ;
+
+DEFINE __expr193 := (opstep.1 | opstep.0) ;
+
+DEFINE __expr97 := (__expr76 & __expr96) ;
+
+DEFINE __expr65 := (step.2 | (step.1 | __expr21)) ;
+
+DEFINE __expr28 := (opstep.2 & opstep.1) ;
+
+DEFINE __expr23 := ((log1.change | log2.change) | log3.change) ;
+
+DEFINE __expr198 := (__expr57 & __expr90) ;
+
+DEFINE __expr78 := !next(opstep.1) ;
+
+DEFINE __expr42 := (opstep.3 & __expr41) ;
+
+DEFINE __expr176 := (next(eirich.watsol) <-> case
+__expr65 : eirich.watsol;
+TRUE : log1.CR0075;
+esac) ;
+
+DEFINE __expr151 := (next(ti0276.t) <-> (log2.TT0276l & case
+__expr71 : ti0276.t;
+TRUE : log2.TT0276l;
+esac)) ;
+
+DEFINE __expr208 := (__expr57 & __expr108) ;
+
+DEFINE __expr113 := case
+__expr57 : case
+__expr75 : (next(opstep.4) & __expr80);
+__expr27 : __expr83;
+__expr84 : (next(opstep.4) & __expr82);
+__expr43 : (__expr81 & __expr86);
+__expr87 : (next(opstep.4) & __expr86);
+__expr47 : (__expr81 & __expr88);
+__expr90 : (next(opstep.4) & __expr88);
+__expr91 : (__expr81 & __expr93);
+(__expr2 & __expr34) : (next(opstep.4) & __expr93);
+__expr35 : (__expr81 & __expr94);
+__expr95 : (next(opstep.4) & __expr94);
+__expr37 : (__expr81 & __expr97);
+__expr98 : case
+__expr1 : (next(opstep.4) & __expr97);
+TRUE : __expr83;
+esac;
+__expr30 : (__expr81 & __expr99);
+__expr101 : (next(opstep.4) & __expr99);
+__expr102 : (__expr81 & __expr103);
+__expr107 : (next(opstep.4) & __expr103);
+__expr108 : (__expr81 & __expr80);
+TRUE : __expr112;
+esac;
+TRUE : __expr112;
+esac ;
+
+DEFINE __expr76 := !next(opstep.3) ;
+
+DEFINE __expr83 := (__expr81 & __expr82) ;
+
+DEFINE __expr12 := !log3.CR0285 ;
+
+DEFINE __expr189 := case
+opstep.3 : __expr41;
+TRUE : __expr25;
+esac ;
+
+DEFINE __expr173 := case
+__expr71 : __expr172;
+wghgat.z : (__expr171 & (__expr168 & __expr165));
+(bc56.working & __expr53) : case
+(wghhop.h.2 & (wghhop.h.1 & wghhop.h.0)) : __expr172;
+wghhop.h.2 : (__expr171 & case
+wghhop.h.1 : (__expr168 & (__expr19 & next(wghhop.h.0)));
+TRUE : __expr167;
+esac);
+TRUE : __expr170;
+esac;
+TRUE : __expr172;
+esac ;
+
+DEFINE __expr159 := (next(ti0271.t) <-> (log2.TS0271l & case
+__expr71 : ti0271.t;
+TRUE : log2.TS0271l;
+esac)) ;
+
+DEFINE __expr103 := (__expr76 & (__expr77 & (__expr78 & next(opstep.0)))) ;
+
+DEFINE __expr92 := (__expr77 & next(opstep.1)) ;
+
+DEFINE __expr17 := !ti0262.t ;
+
+DEFINE __expr57 := (__expr56 & (__expr0 & __expr21)) ;
+
+DEFINE __expr136 := (next(log2.TS0297l) <-> case
+__expr62 : case
+__expr16 : !__expr44;
+TRUE : log1.CR0048;
+esac;
+TRUE : log2.TS0297l;
+esac) ;
+
+DEFINE __expr126 := (next(log1.CR0089) <-> case
+__expr60 : (ti0274.t | (eirich.m9 & !__expr102));
+TRUE : log1.CR0089;
+esac) ;
+
+DEFINE __expr69 := (fail0149l | next(fail0149l)) ;
+
+DEFINE __expr169 := case
+wghhop.h.1 : __expr167;
+TRUE : (__expr168 & __expr166);
+esac ;
+
+DEFINE __expr86 := (__expr76 & __expr85) ;
+
+DEFINE __expr96 := (next(opstep.2) & next(opstep.1)) ;
+
+DEFINE __expr22 := (opstep.3 | opstep.2) ;
+
+DEFINE __expr120 := (next(log1.CR0261) <-> case
+__expr60 : log1.f;
+TRUE : log1.CR0261;
+esac) ;
+
+DEFINE __expr73 := (__expr2 & __expr46) ;
+
+DEFINE __expr137 := (next(log2.TT0262l) <-> case
+__expr62 : case
+__expr17 : log1.CR0261;
+TRUE : (log1.CR0261 | log3.CR0285);
+esac;
+TRUE : log2.TT0262l;
+esac) ;
+
+DEFINE __expr87 := (__expr73 & log2.CR0080) ;
+
+DEFINE __expr16 := !ti0297.done ;
+
+DEFINE __expr107 := (__expr2 & __expr106) ;
+
+DEFINE __expr10 := !log2.CR0080 ;
+
+DEFINE __expr184 := (flare.pilot_valve | flare.main_valve) ;
+
+DEFINE __expr52 := (log2.ac <-> ((((__expr38 | log2.CR0278) & mixgat.z) & __expr8) & __expr51)) ;
+
+DEFINE __expr168 := !next(wghhop.h.1) ;
+
+DEFINE __expr98 := (__expr2 & __expr29) ;
+
+DEFINE __expr134 := ((log1.CR0299 & !log3.CR0287) & flare.flame) ;
+
+DEFINE __expr61 := !next(step.2) ;
+
+DEFINE __expr175 := (next(eirich.material) <-> case
+__expr65 : eirich.material;
+TRUE : (__expr20 & ((wghgat.z & (wghhop.h.2 | (wghhop.h.1 | wghhop.h.0))) | eirich.material));
+esac) ;
+
+DEFINE __expr133 := (next(log2.CR0106) <-> case
+__expr62 : ((__expr75 | log1.CR0308) & !__expr107);
+TRUE : log2.CR0106;
+esac) ;
+
+DEFINE __expr62 := (__expr56 & step.1) ;
+
+DEFINE __expr48 := !__expr47 ;
+
+DEFINE __expr155 := (__expr14 & __expr15) ;
+
+DEFINE __expr68 := (fail0148h | next(fail0148h)) ;
+
+DEFINE __expr104 := (__expr5 & opstep.0) ;
+
+DEFINE __expr206 := (__expr57 & (__expr98 & __expr1)) ;
+
+DEFINE __expr75 := (__expr2 & __expr26) ;
+
+DEFINE __expr55 := (log1.o <-> (((((((wghhop.h.0 | log1.CR0309) & !__expr53) & flare.flame) & __expr18) & __expr20) & __expr10) & __expr18)) ;
+
+DEFINE __expr8 := !log1.CR0101 ;
+
+DEFINE __expr150 := (next(log3.change) <-> (!(log3.CR0287 <-> next(log3.CR0287)) | (!(log3.CR0285 <-> next(log3.CR0285)) | (__expr65 & log3.change)))) ;
+
+DEFINE __expr46 := (__expr3 & __expr45) ;
+
+DEFINE __expr163 := (next(bc56.working) <-> case
+__expr65 : bc56.working;
+TRUE : log2.CR0065;
+esac) ;
+
+DEFINE __expr127 := (next(log1.CR0082) <-> case
+__expr60 : log1.m;
+TRUE : log1.CR0082;
+esac) ;
+
+DEFINE __expr66 := !__expr65 ;
+
+DEFINE __expr53 := (bc56.working & __expr19) ;
+
+DEFINE __expr31 := !__expr30 ;
+
+DEFINE __expr77 := !next(opstep.2) ;
+
+DEFINE __expr3 := !opstep.3 ;
+
+DEFINE __expr0 := !step.1 ;
+
+DEFINE __expr156 := case
+__expr9 : (__expr152 & __expr153);
+__expr71 : __expr154;
+__expr155 : next(ti0297.t.1);
+(ti0297.t.1 | (__expr14 & ti0297.t.0)) : (__expr152 & next(ti0297.t.0));
+TRUE : __expr154;
+esac ;
+
+DEFINE __expr138 := (next(log2.TS0271l) <-> case
+__expr62 : log1.CR0270;
+TRUE : log2.TS0271l;
+esac) ;
+
+DEFINE __expr67 := (fail0148l | next(fail0148l)) ;
+
+DEFINE __expr35 := (opstep.4 & __expr34) ;
+
+DEFINE __expr158 := (next(ti0262.t) <-> (log2.TT0262l & case
+__expr71 : ti0262.t;
+TRUE : log2.TT0262l;
+esac)) ;
+
+DEFINE __expr194 := (opstep.2 | __expr193) ;
+
+DEFINE __expr154 := case
+ti0297.t.1 : next(ti0297.t.1);
+TRUE : (__expr152 & case
+ti0297.t.0 : next(ti0297.t.0);
+TRUE : __expr153;
+esac);
+esac ;
+
+DEFINE __expr29 := (__expr3 & __expr28) ;
+
+DEFINE __expr122 := (next(log1.CR0069) <-> case
+__expr60 : ti0271.t;
+TRUE : log1.CR0069;
+esac) ;
+
+DEFINE __expr43 := (opstep.4 & __expr42) ;
+
+DEFINE __expr116 := (next(log1.CR0299) <-> case
+__expr60 : ((wghhop.h.0 | log1.CR0299) & __expr51);
+TRUE : log1.CR0299;
+esac) ;
+
+DEFINE __expr85 := (next(opstep.2) & __expr78) ;
+
+DEFINE __expr24 := (__expr5 & __expr6) ;
+
+DEFINE __expr164 := (next(wghgat.z) <-> case
+__expr71 : wghgat.z;
+TRUE : (log2.CR0081 | (!log1.CR0082 & wghgat.z));
+esac) ;
+
+DEFINE __expr128 := (next(log1.TT0300l) <-> case
+__expr60 : (log2.CR0080 & wghgat.z);
+TRUE : log1.TT0300l;
+esac) ;
+
+DEFINE __expr180 := (next(eirich.m9) <-> case
+__expr65 : eirich.m9;
+TRUE : log1.CR0089;
+esac) ;
+
+DEFINE __expr44 := ((bc57.working | fail0148h) & !fail0148l) ;
+
+DEFINE __expr152 := !next(ti0297.t.1) ;
+
+DEFINE __expr117 := !__expr91 ;
+
+DEFINE __expr13 := !ti0276.t ;
+
+DEFINE __expr100 := (opstep.3 & __expr28) ;
+
+DEFINE __expr207 := case
+opstep.4 : __expr204;
+opstep.3 : __expr203;
+TRUE : (opstep.2 | __expr202);
+esac ;
+
+DEFINE __expr183 := (next(flare.main_valve) <-> case
+__expr65 : flare.main_valve;
+TRUE : (__expr44 & (flare.flame | flare.main_valve));
+esac) ;
+
+DEFINE __expr15 := !ti0297.t.0 ;
+
+DEFINE __expr140 := (next(log2.CR0077) <-> case
+__expr62 : __expr139;
+TRUE : log2.CR0077;
+esac) ;
+
+DEFINE __expr72 := (next(again) <-> again) ;
+
+DEFINE __expr38 := !__expr37 ;
+
+DEFINE __expr94 := (next(opstep.3) & __expr92) ;
+
+DEFINE __expr54 := (log1.m <-> (((__expr53 | log1.CR0082) | ti0300.t) & wghgat.z)) ;
+
+DEFINE __expr162 := (next(ti0300.t) <-> (log1.TT0300l & case
+__expr71 : ti0300.t;
+TRUE : log1.TT0300l;
+esac)) ;
+
+DEFINE __expr153 := !next(ti0297.t.0) ;
+
+DEFINE __expr170 := (next(wghhop.h.2) & __expr169) ;
+
+DEFINE __expr99 := (next(opstep.3) & __expr96) ;
+
+DEFINE __expr84 := ((__expr2 & __expr42) & log3.CR0285) ;
+
+DEFINE __expr59 := (next(step.2) & __expr58) ;
+
+DEFINE __expr139 := (log1.CR0270 & !ti0271.t) ;
+
+DEFINE __expr36 := (opstep.3 & __expr33) ;
+
+DEFINE __expr63 := (step.2 & step.1) ;
+
+DEFINE __expr123 := (next(log1.TS0272l) <-> case
+__expr60 : eirich.mf34;
+TRUE : log1.TS0272l;
+esac) ;
+
+DEFINE __expr56 := !step.2 ;
+
+DEFINE __expr27 := (opstep.4 & __expr26) ;
+
+DEFINE __expr142 := (next(log2.CR0081) <-> case
+__expr62 : __expr141;
+TRUE : log2.CR0081;
+esac) ;
+
+DEFINE __expr131 := (next(log1.change) <-> (!(log1.CR0307 <-> next(log1.CR0307)) | (!(log1.CR0308 <-> next(log1.CR0308)) | (!(log1.CR0299 <-> next(log1.CR0299)) | (!(log1.CR0075 <-> next(log1.CR0075)) | (!(log1.CR0048 <-> next(log1.CR0048)) | (!(log1.CR0261 <-> next(log1.CR0261)) | (!(log1.CR0270 <-> next(log1.CR0270)) | (!(log1.CR0069 <-> next(log1.CR0069)) | (!(log1.TS0272l <-> next(log1.TS0272l)) | (!(log1.CR0085 <-> next(log1.CR0085)) | (!(log1.TS0274l <-> next(log1.TS0274l)) | (!(log1.CR0089 <-> next(log1.CR0089)) | (!(log1.CR0082 <-> next(log1.CR0082)) | (!(log1.TT0300l <-> next(log1.TT0300l)) | (!(log1.CR0309 <-> next(log1.CR0309)) | (!(log1.CR0101 <-> next(log1.CR0101)) | (__expr65 & log1.change)))))))))))))))))) ;
+
+DEFINE __expr19 := !wghhop.h.0 ;
+
+DEFINE __expr174 := (next(mixgat.z) <-> case
+__expr71 : mixgat.z;
+TRUE : (log1.CR0101 | (log1.CR0101 & mixgat.z));
+esac) ;
+
+DEFINE __expr145 := (next(log2.change) <-> (!(log2.CR0065 <-> next(log2.CR0065)) | (!(log2.CR0106 <-> next(log2.CR0106)) | (!(log2.TT0276l <-> next(log2.TT0276l)) | (!(log2.TS0297l <-> next(log2.TS0297l)) | (!(log2.TT0262l <-> next(log2.TT0262l)) | (!(log2.TS0271l <-> next(log2.TS0271l)) | (!(log2.CR0077 <-> next(log2.CR0077)) | (!(log2.CR0081 <-> next(log2.CR0081)) | (!(log2.CR0080 <-> next(log2.CR0080)) | (!(log2.CR0278 <-> next(log2.CR0278)) | (__expr65 & log2.change)))))))))))) ;
+
+DEFINE __expr129 := (next(log1.CR0309) <-> case
+__expr60 : log1.o;
+TRUE : log1.CR0309;
+esac) ;
+
+DEFINE __expr205 := (case
+opstep.4 : __expr199;
+__expr22 : opstep.1;
+TRUE : __expr193;
+esac & case
+opstep.4 : case
+__expr22 : __expr5;
+TRUE : __expr202;
+esac;
+TRUE : __expr204;
+esac) ;
+
+DEFINE __expr181 := (next(flare.air_sol) <-> case
+__expr65 : flare.air_sol;
+TRUE : log1.CR0048;
+esac) ;
+
+DEFINE __expr179 := (next(eirich.m7) <-> case
+__expr65 : eirich.m7;
+TRUE : log1.CR0085;
+esac) ;
+
+DEFINE __expr157 := case
+__expr71 : (next(ti0297.done) <-> ti0297.done);
+(__expr9 | (ti0297.t.1 | __expr15)) : !next(ti0297.done);
+TRUE : (__expr16 | next(ti0297.done));
+esac ;
+
+DEFINE __expr105 := (__expr4 & __expr104) ;
+
+DEFINE __expr187 := !__expr75 ;
+
+DEFINE __expr51 := !__expr35 ;
+
+DEFINE __expr166 := case
+wghhop.h.0 : next(wghhop.h.0);
+TRUE : __expr165;
+esac ;
+
+DEFINE __expr141 := (log1.CR0309 & __expr18) ;
+
+DEFINE __expr121 := (next(log1.CR0270) <-> case
+__expr60 : (__expr31 & ti0262.t);
+TRUE : log1.CR0270;
+esac) ;
+
+DEFINE __expr40 := (log1.p <-> ((((__expr35 | log1.CR0101) & __expr11) & __expr38) & __expr39)) ;
+
+DEFINE __expr58 := !next(step.1) ;
+
+DEFINE __expr6 := !opstep.0 ;
+
+DEFINE __expr191 := !__expr43 ;
+
+DEFINE __expr204 := case
+opstep.3 : __expr203;
+opstep.2 : __expr5;
+TRUE : __expr202;
+esac ;
+
+DEFINE __expr112 := case
+opstep.4 : (next(opstep.4) & __expr111);
+TRUE : (__expr81 & __expr111);
+esac ;
+
+DEFINE __expr80 := (__expr76 & (__expr77 & (__expr78 & __expr79))) ;
+
+DEFINE __expr47 := (opstep.4 & __expr46) ;
+
+DEFINE __expr195 := case
+opstep.3 : (opstep.2 | opstep.1);
+TRUE : __expr194;
+esac ;
+
+DEFINE __expr186 := (next(bc57.working) <-> case
+__expr65 : bc57.working;
+TRUE : log2.CR0106;
+esac) ;
+
+DEFINE __expr147 := (next(log3.CR0287) <-> case
+__expr63 : __expr146;
+TRUE : log3.CR0287;
+esac) ;
+
+DEFINE __expr74 := case
+__expr71 : __expr72;
+TRUE : (__expr73 | __expr72);
+esac ;
+
+DEFINE __expr26 := (__expr3 & __expr25) ;
+
+DEFINE __expr115 := (next(log1.CR0308) <-> case
+__expr60 : (__expr44 & __expr39);
+TRUE : log1.CR0308;
+esac) ;
+
+DEFINE __expr90 := ((__expr2 & __expr89) & eirich.watsol) ;
+
+DEFINE __expr81 := !next(opstep.4) ;
+
+DEFINE __expr30 := (opstep.4 & __expr29) ;
+
+DEFINE __expr143 := (next(log2.CR0080) <-> case
+__expr62 : log2.ab;
+TRUE : log2.CR0080;
+esac) ;
+
+DEFINE __expr109 := case
+opstep.1 : next(opstep.1);
+TRUE : __expr78;
+esac ;
+
+DEFINE __expr161 := (next(ti0274.t) <-> (log1.TS0274l & case
+__expr71 : ti0274.t;
+TRUE : log1.TS0274l;
+esac)) ;
+
+DEFINE __expr1 := !again ;
+
+DEFINE __expr146 := ((ti0276.t | log3.CR0287) & log1.CR0299) ;
+
+DEFINE __expr130 := (next(log1.CR0101) <-> case
+__expr60 : log1.p;
+TRUE : log1.CR0101;
+esac) ;
+
+DEFINE __expr88 := (next(opstep.3) & __expr85) ;
+
+DEFINE __expr4 := !opstep.2 ;
+
+DEFINE __expr182 := (next(flare.pilot_valve) <-> case
+__expr65 : flare.pilot_valve;
+TRUE : __expr44;
+esac) ;
+
+DEFINE __expr89 := (opstep.3 & __expr45) ;
+
+DEFINE __expr33 := (__expr4 & opstep.1) ;
+
+DEFINE __expr108 := ((opstep.4 & __expr106) & __expr7) ;
+
+DEFINE __expr178 := (next(eirich.mf34) <-> case
+__expr65 : eirich.mf34;
+TRUE : log1.CR0069;
+esac) ;
+
+DEFINE __expr172 := case
+wghhop.h.2 : __expr170;
+TRUE : (__expr171 & __expr169);
+esac ;
+
+DEFINE __expr149 := (next(log3.CR0285) <-> case
+__expr63 : __expr148;
+TRUE : log3.CR0285;
+esac) ;
+
+DEFINE __expr101 := (__expr2 & __expr100) ;
+
+DEFINE __expr41 := (__expr4 & __expr5) ;
+
+DEFINE __expr20 := !mixgat.z ;
+
+DEFINE __expr11 := !log2.CR0278 ;
+
+DEFINE __expr190 := case
+opstep.4 : __expr26;
+TRUE : __expr189;
+esac ;
+
+DEFINE __expr70 := (fail0149h | next(fail0149h)) ;
+
+DEFINE __expr14 := !ti0297.t.1 ;
+
+DEFINE __expr201 := (__expr57 & __expr95) ;
+
+DEFINE __expr124 := (next(log1.CR0085) <-> case
+__expr60 : (ti0272.t | (eirich.m7 & !__expr101));
+TRUE : log1.CR0085;
+esac) ;
+
+DEFINE __expr197 := (case
+opstep.4 : (opstep.3 | __expr194);
+TRUE : __expr195;
+esac & case
+opstep.4 : __expr189;
+TRUE : __expr196;
+esac) ;
+
+DEFINE __expr185 := (next(flare.flame) <-> case
+__expr65 : flare.flame;
+TRUE : (flare.air_sol & __expr184);
+esac) ;
+
+DEFINE __expr82 := (next(opstep.3) & (__expr77 & __expr78)) ;
+
+DEFINE __expr64 := case
+__expr57 : __expr59;
+__expr60 : (__expr61 & next(step.1));
+__expr62 : (next(step.2) & next(step.1));
+__expr63 : (__expr61 & (__expr58 & next(step.0)));
+((__expr56 & (__expr0 & step.0)) & repeat) : __expr59;
+TRUE : (__expr61 & (__expr58 & !next(step.0)));
+esac ;
+
+DEFINE __expr60 := (step.2 & __expr0) ;
+
+DEFINE __expr171 := !next(wghhop.h.2) ;
+
+DEFINE __expr148 := ((eirich.mf34 & eirich.m7) & eirich.m9) ;
+
+DEFINE __expr135 := (next(log2.TT0276l) <-> case
+__expr62 : case
+__expr13 : __expr134;
+TRUE : ((log1.CR0299 & __expr117) & flare.flame);
+esac;
+TRUE : log2.TT0276l;
+esac) ;
+
+DEFINE __expr37 := (opstep.4 & __expr36) ;
+
+DEFINE __expr18 := !wghgat.z ;
+
+DEFINE __expr196 := case
+opstep.3 : __expr41;
+opstep.2 : __expr5;
+TRUE : __expr24;
+esac ;
+
+DEFINE __expr7 := !log1.CR0048 ;
+
+DEFINE __expr144 := (next(log2.CR0278) <-> case
+__expr62 : log2.ac;
+TRUE : log2.CR0278;
+esac) ;
+
+DEFINE __expr200 := (case
+opstep.4 : __expr195;
+TRUE : __expr199;
+esac & case
+opstep.4 : __expr196;
+__expr22 : __expr5;
+TRUE : __expr24;
+esac) ;
+
+DEFINE __expr50 := (log2.ab <-> (((wghhop.h.0 & wghgat.z) | (log2.CR0080 & __expr38)) & __expr20)) ;
+
+DEFINE __expr114 := (next(log1.CR0307) <-> case
+__expr60 : bc56.working;
+TRUE : log1.CR0307;
+esac) ;
+
+DEFINE __expr49 := (log2.q <-> ((((__expr43 & (eirich.mf34 | eirich.ms34)) | log1.CR0307) & __expr44) & __expr48)) ;
+
+DEFINE __expr32 := (log1.f <-> (((__expr27 | log1.CR0261) & __expr31) & __expr12)) ;
+
+DEFINE __expr106 := (__expr3 & __expr105) ;
+
+DEFINE __expr79 := !next(opstep.0) ;
+

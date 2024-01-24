@@ -1,0 +1,955 @@
+-- Flattened Boolean FSM model  generated from msi_wtrans.smv
+-- Dumped cwd->layers are: model model_bool determ determ_bool __TempLayer_0 
+
+MODULE main
+-- Input variables from layer 'model'
+-- Input variables from layer 'model_bool'
+-- Input variables from layer 'determ'
+-- Input variables from layer 'determ_bool'
+-- Input variables from layer '__TempLayer_0'
+-- State variables from layer 'model'
+
+VAR
+BUS_DATA : boolean;
+BUS_ADDR : boolean;
+
+VAR
+n0.p.eff_addr : boolean;
+n0.p.register : boolean;
+
+VAR
+n0.c.data : boolean;
+n0.c.tag : boolean;
+
+VAR
+n0.bus_master : boolean;
+
+VAR
+n1.p.eff_addr : boolean;
+n1.p.register : boolean;
+
+VAR
+n1.c.data : boolean;
+n1.c.tag : boolean;
+
+VAR
+n1.bus_master : boolean;
+
+VAR
+n2.p.eff_addr : boolean;
+n2.p.register : boolean;
+
+VAR
+n2.c.data : boolean;
+n2.c.tag : boolean;
+
+VAR
+n2.bus_master : boolean;
+m.data_0 : boolean;
+m.data_1 : boolean;
+
+-- State variables from layer 'model_bool'
+VAR
+BUS_CMD.1 : boolean;
+BUS_CMD.0 : boolean;
+SNOOP_RESP.0 : boolean;
+n0.p.mem_req.1 : boolean;
+n0.p.mem_req.0 : boolean;
+n0.c.impl_state.2 : boolean;
+n0.c.impl_state.1 : boolean;
+n0.c.impl_state.0 : boolean;
+n0.bus_req.1 : boolean;
+n0.bus_req.0 : boolean;
+n1.p.mem_req.1 : boolean;
+n1.p.mem_req.0 : boolean;
+n1.c.impl_state.2 : boolean;
+n1.c.impl_state.1 : boolean;
+n1.c.impl_state.0 : boolean;
+n1.bus_req.1 : boolean;
+n1.bus_req.0 : boolean;
+n2.p.mem_req.1 : boolean;
+n2.p.mem_req.0 : boolean;
+n2.c.impl_state.2 : boolean;
+n2.c.impl_state.1 : boolean;
+n2.c.impl_state.0 : boolean;
+n2.bus_req.1 : boolean;
+n2.bus_req.0 : boolean;
+last_master.1 : boolean;
+last_master.0 : boolean;
+
+-- State variables from layer 'determ'
+-- State variables from layer 'determ_bool'
+-- State variables from layer '__TempLayer_0'
+-- Frozen variables from layer 'model'
+-- Frozen variables from layer 'model_bool'
+-- Frozen variables from layer 'determ'
+-- Frozen variables from layer 'determ_bool'
+-- Frozen variables from layer '__TempLayer_0'
+
+INIT
+ __expr0
+
+INIT
+ !n0.p.mem_req.0
+
+INIT
+ !n0.p.eff_addr
+
+INIT
+ !n0.p.register
+
+INIT
+ __expr1
+
+INIT
+ __expr2
+
+INIT
+ __expr3
+
+INIT
+ __expr4
+
+INIT
+ !n1.p.mem_req.0
+
+INIT
+ !n1.p.eff_addr
+
+INIT
+ !n1.p.register
+
+INIT
+ __expr5
+
+INIT
+ __expr6
+
+INIT
+ __expr7
+
+INIT
+ __expr8
+
+INIT
+ !n2.p.mem_req.0
+
+INIT
+ !n2.p.eff_addr
+
+INIT
+ !n2.p.register
+
+INIT
+ __expr9
+
+INIT
+ __expr10
+
+INIT
+ __expr11
+
+INIT
+ !m.data_0
+
+INIT
+ !m.data_1
+
+
+INVAR
+ (__expr0 | !n0.p.mem_req.0)
+
+INVAR
+ (__expr1 | (__expr2 | __expr3))
+
+INVAR
+ (__expr4 | !n1.p.mem_req.0)
+
+INVAR
+ (__expr5 | (__expr6 | __expr7))
+
+INVAR
+ (__expr8 | !n2.p.mem_req.0)
+
+INVAR
+ (__expr9 | (__expr10 | __expr11))
+
+INVAR
+ (__expr12 | !last_master.0)
+
+INVAR
+ __expr19
+
+INVAR
+ __expr37
+
+INVAR
+ __expr19
+
+INVAR
+ __expr37
+
+INVAR
+ __expr42
+
+INVAR
+ __expr43
+
+INVAR
+ __expr42
+
+INVAR
+ __expr43
+
+INVAR
+ __expr46
+
+INVAR
+ __expr46
+
+INVAR
+ (n0.bus_master <-> (__expr12 & last_master.0))
+
+INVAR
+ __expr48
+
+INVAR
+ __expr48
+
+INVAR
+ (n1.bus_master <-> (__expr12 & !last_master.0))
+
+INVAR
+ __expr50
+
+INVAR
+ __expr50
+
+INVAR
+ (n2.bus_master <-> last_master.1)
+
+TRANS
+ __expr154
+
+TRANS
+ __expr60
+
+TRANS
+ __expr61
+
+TRANS
+ __expr62
+
+TRANS
+ __expr82
+
+TRANS
+ __expr83
+
+TRANS
+ __expr84
+
+TRANS
+ __expr93
+
+TRANS
+ __expr94
+
+TRANS
+ __expr95
+
+TRANS
+ __expr115
+
+TRANS
+ __expr116
+
+TRANS
+ __expr117
+
+TRANS
+ __expr125
+
+TRANS
+ __expr126
+
+TRANS
+ __expr127
+
+TRANS
+ __expr146
+
+TRANS
+ __expr147
+
+TRANS
+ __expr148
+
+TRANS
+ __expr150
+
+TRANS
+ __expr151
+
+TRANS
+ __expr60
+
+TRANS
+ __expr61
+
+TRANS
+ __expr62
+
+TRANS
+ __expr82
+
+TRANS
+ __expr83
+
+TRANS
+ __expr84
+
+TRANS
+ __expr93
+
+TRANS
+ __expr94
+
+TRANS
+ __expr95
+
+TRANS
+ __expr115
+
+TRANS
+ __expr116
+
+TRANS
+ __expr117
+
+TRANS
+ __expr125
+
+TRANS
+ __expr126
+
+TRANS
+ __expr127
+
+TRANS
+ __expr146
+
+TRANS
+ __expr147
+
+TRANS
+ __expr148
+
+TRANS
+ __expr150
+
+TRANS
+ __expr151
+
+TRANS
+ __expr154
+
+
+LTLSPEC
+ G !((__expr27 & __expr90) & (n0.c.tag <-> n1.c.tag))
+
+-- Symbols introduced by the dumper:
+DEFINE __expr22 := (__expr20 | __expr21) ;
+
+DEFINE __expr5 := !n1.c.impl_state.2 ;
+
+DEFINE __expr54 := (__expr2 & __expr3) ;
+
+DEFINE __expr142 := (next(n2.c.impl_state.2) & next(n2.c.impl_state.1)) ;
+
+DEFINE __expr123 := (__expr8 & !n2.p.mem_req.0) ;
+
+DEFINE __expr60 := (__expr59 | case
+n0.p.mem_req.1 : next(n0.p.mem_req.1);
+TRUE : (!next(n0.p.mem_req.1) & case
+n0.p.mem_req.0 : next(n0.p.mem_req.0);
+TRUE : !next(n0.p.mem_req.0);
+esac);
+esac) ;
+
+DEFINE __expr13 := !n0.bus_req.1 ;
+
+DEFINE __expr75 := (__expr67 & __expr74) ;
+
+DEFINE __expr106 := !n1.bus_master ;
+
+DEFINE __expr40 := !n2.bus_master ;
+
+DEFINE __expr15 := !n1.bus_req.1 ;
+
+DEFINE __expr124 := !(((BUS_ADDR <-> n2.c.tag) & __expr51) | !((((__expr118 & __expr119) & __expr35) | ((__expr118 & n2.p.mem_req.1) & ((__expr121 | __expr122) | __expr35))) | __expr123)) ;
+
+DEFINE __expr30 := (__expr5 & (n1.c.impl_state.1 & n1.c.impl_state.0)) ;
+
+DEFINE __expr17 := !n2.bus_req.1 ;
+
+DEFINE __expr70 := (__expr63 & __expr69) ;
+
+DEFINE __expr7 := !n1.c.impl_state.0 ;
+
+DEFINE __expr115 := case
+n1.bus_master : case
+(n1.c.impl_state.2 & n1.c.impl_state.1) : __expr99;
+__expr47 : (__expr100 & (next(n1.c.impl_state.1) & __expr97));
+TRUE : __expr105;
+esac;
+((__expr106 & __expr21) & (n1.c.tag <-> BUS_ADDR)) : case
+__expr29 : __expr99;
+TRUE : __expr105;
+esac;
+((__expr106 & __expr20) & (n1.c.tag <-> BUS_ADDR)) : case
+(__expr88 | __expr29) : __expr101;
+__expr89 : __expr108;
+TRUE : __expr105;
+esac;
+(__expr109 & __expr85) : case
+__expr110 : __expr111;
+TRUE : __expr104;
+esac;
+(__expr112 & __expr85) : case
+__expr88 : (next(n1.c.impl_state.2) & __expr107);
+__expr110 : __expr108;
+TRUE : __expr104;
+esac;
+(__expr109 & __expr113) : case
+__expr87 : __expr111;
+TRUE : __expr114;
+esac;
+(__expr112 & __expr113) : case
+__expr87 : __expr108;
+TRUE : __expr114;
+esac;
+TRUE : __expr104;
+esac ;
+
+DEFINE __expr14 := !n0.bus_req.0 ;
+
+DEFINE __expr148 := (next(n2.c.tag) <-> case
+((n2.bus_master & __expr21) | (n2.bus_master & __expr20)) : BUS_ADDR;
+TRUE : n2.c.tag;
+esac) ;
+
+DEFINE __expr112 := (__expr106 & __expr86) ;
+
+DEFINE __expr76 := (__expr73 & n0.p.mem_req.1) ;
+
+DEFINE __expr35 := (__expr33 | __expr34) ;
+
+DEFINE __expr16 := !n1.bus_req.0 ;
+
+DEFINE __expr147 := (next(n2.c.data) <-> case
+((__expr33 & __expr118) & __expr119) : n2.p.register;
+(n2.bus_master & __expr51) : BUS_DATA;
+TRUE : n2.c.data;
+esac) ;
+
+DEFINE __expr122 := (n2.c.impl_state.2 & __expr49) ;
+
+DEFINE __expr86 := (__expr4 & n1.p.mem_req.0) ;
+
+DEFINE __expr29 := (__expr5 & (n1.c.impl_state.1 & __expr7)) ;
+
+DEFINE __expr18 := !n2.bus_req.0 ;
+
+DEFINE __expr4 := !n1.p.mem_req.1 ;
+
+DEFINE __expr133 := (__expr132 & __expr130) ;
+
+DEFINE __expr125 := (__expr124 | case
+n2.p.mem_req.1 : next(n2.p.mem_req.1);
+TRUE : (!next(n2.p.mem_req.1) & case
+n2.p.mem_req.0 : next(n2.p.mem_req.0);
+TRUE : !next(n2.p.mem_req.0);
+esac);
+esac) ;
+
+DEFINE __expr66 := (next(n0.c.impl_state.2) & __expr65) ;
+
+DEFINE __expr154 := case
+n0.bus_master : (__expr152 & __expr153);
+n1.bus_master : next(last_master.1);
+n2.bus_master : (__expr152 & next(last_master.0));
+last_master.1 : next(last_master.1);
+TRUE : (__expr152 & case
+last_master.0 : next(last_master.0);
+TRUE : __expr153;
+esac);
+esac ;
+
+DEFINE __expr9 := !n2.c.impl_state.2 ;
+
+DEFINE __expr51 := (__expr21 | __expr20) ;
+
+DEFINE __expr37 := case
+(__expr23 & __expr24) : (BUS_DATA <-> m.data_0);
+(__expr23 & BUS_ADDR) : (BUS_DATA <-> m.data_1);
+__expr28 : (BUS_DATA <-> n0.c.data);
+__expr32 : (BUS_DATA <-> n1.c.data);
+TRUE : (!__expr36 | (BUS_DATA <-> n2.c.data));
+esac ;
+
+DEFINE __expr149 := (__expr22 & !SNOOP_RESP.0) ;
+
+DEFINE __expr126 := (__expr124 | (next(n2.p.eff_addr) <-> n2.p.eff_addr)) ;
+
+DEFINE __expr46 := case
+__expr44 : (__expr13 & __expr14);
+__expr45 : (n0.bus_req.1 & __expr14);
+__expr26 : __expr38;
+TRUE : (n0.bus_req.1 & n0.bus_req.0);
+esac ;
+
+DEFINE __expr108 := (__expr100 & __expr107) ;
+
+DEFINE __expr23 := (__expr22 & SNOOP_RESP.0) ;
+
+DEFINE __expr138 := (__expr128 & next(n2.c.impl_state.0)) ;
+
+DEFINE __expr127 := case
+(__expr124 & __expr119) : (next(n2.p.register) <-> n2.p.register);
+TRUE : (!(__expr124 & n2.p.mem_req.1) | (next(n2.p.register) <-> n2.c.data));
+esac ;
+
+DEFINE __expr71 := case
+n0.c.impl_state.2 : (next(n0.c.impl_state.2) & case
+n0.c.impl_state.1 : next(n0.c.impl_state.1);
+TRUE : __expr70;
+esac);
+TRUE : (__expr67 & case
+n0.c.impl_state.1 : (next(n0.c.impl_state.1) & __expr69);
+TRUE : __expr70;
+esac);
+esac ;
+
+DEFINE __expr44 := (n0.c.impl_state.2 & n0.c.impl_state.1) ;
+
+DEFINE __expr11 := !n2.c.impl_state.0 ;
+
+DEFINE __expr150 := (next(m.data_0) <-> case
+((__expr149 & __expr24) | ((BUS_CMD.1 & BUS_CMD.0) & __expr24)) : BUS_DATA;
+TRUE : m.data_0;
+esac) ;
+
+DEFINE __expr103 := (__expr96 & __expr102) ;
+
+DEFINE __expr2 := !n0.c.impl_state.1 ;
+
+DEFINE __expr128 := !next(n2.c.impl_state.1) ;
+
+DEFINE __expr117 := (next(n1.c.tag) <-> case
+((n1.bus_master & __expr21) | (n1.bus_master & __expr20)) : BUS_ADDR;
+TRUE : n1.c.tag;
+esac) ;
+
+DEFINE __expr109 := (__expr106 & n1.p.mem_req.1) ;
+
+DEFINE __expr145 := case
+__expr33 : (__expr132 & (next(n2.c.impl_state.1) & next(n2.c.impl_state.0)));
+TRUE : __expr136;
+esac ;
+
+DEFINE __expr116 := (next(n1.c.data) <-> case
+((__expr29 & __expr85) & __expr86) : n1.p.register;
+(n1.bus_master & __expr51) : BUS_DATA;
+TRUE : n1.c.data;
+esac) ;
+
+DEFINE __expr72 := case
+__expr26 : __expr68;
+TRUE : __expr71;
+esac ;
+
+DEFINE __expr67 := !next(n0.c.impl_state.2) ;
+
+DEFINE __expr24 := !BUS_ADDR ;
+
+DEFINE __expr8 := !n2.p.mem_req.1 ;
+
+DEFINE __expr0 := !n0.p.mem_req.1 ;
+
+DEFINE __expr129 := !next(n2.c.impl_state.0) ;
+
+DEFINE __expr110 := (__expr5 & __expr87) ;
+
+DEFINE __expr53 := (__expr0 & n0.p.mem_req.0) ;
+
+DEFINE __expr120 := (__expr10 & __expr11) ;
+
+DEFINE __expr65 := (__expr63 & __expr64) ;
+
+DEFINE __expr77 := (__expr1 & __expr54) ;
+
+DEFINE __expr26 := (__expr1 & (n0.c.impl_state.1 & n0.c.impl_state.0)) ;
+
+DEFINE __expr50 := case
+(n2.c.impl_state.2 & n2.c.impl_state.1) : (__expr17 & __expr18);
+__expr49 : (n2.bus_req.1 & __expr18);
+__expr34 : __expr41;
+TRUE : (n2.bus_req.1 & n2.bus_req.0);
+esac ;
+
+DEFINE __expr45 := (__expr2 & n0.c.impl_state.0) ;
+
+DEFINE __expr104 := case
+n1.c.impl_state.2 : (next(n1.c.impl_state.2) & case
+n1.c.impl_state.1 : next(n1.c.impl_state.1);
+TRUE : __expr103;
+esac);
+TRUE : (__expr100 & case
+n1.c.impl_state.1 : (next(n1.c.impl_state.1) & __expr102);
+TRUE : __expr103;
+esac);
+esac ;
+
+DEFINE __expr41 := (__expr17 & n2.bus_req.0) ;
+
+DEFINE __expr31 := (__expr29 | __expr30) ;
+
+DEFINE __expr6 := !n1.c.impl_state.1 ;
+
+DEFINE __expr25 := (__expr1 & (n0.c.impl_state.1 & __expr3)) ;
+
+DEFINE __expr80 := !__expr52 ;
+
+DEFINE __expr57 := (__expr55 | __expr56) ;
+
+DEFINE __expr36 := ((BUS_ADDR <-> n2.c.tag) & __expr35) ;
+
+DEFINE __expr143 := (__expr40 & __expr119) ;
+
+DEFINE __expr12 := !last_master.1 ;
+
+DEFINE __expr105 := case
+__expr30 : __expr101;
+TRUE : __expr104;
+esac ;
+
+DEFINE __expr100 := !next(n1.c.impl_state.2) ;
+
+DEFINE __expr82 := case
+n0.bus_master : case
+__expr44 : __expr66;
+__expr45 : (__expr67 & (next(n0.c.impl_state.1) & __expr64));
+TRUE : __expr72;
+esac;
+((__expr73 & __expr21) & (n0.c.tag <-> BUS_ADDR)) : case
+__expr25 : __expr66;
+TRUE : __expr72;
+esac;
+((__expr73 & __expr20) & (n0.c.tag <-> BUS_ADDR)) : case
+(__expr55 | __expr25) : __expr68;
+__expr56 : __expr75;
+TRUE : __expr72;
+esac;
+(__expr76 & __expr52) : case
+__expr77 : __expr78;
+TRUE : __expr71;
+esac;
+(__expr79 & __expr52) : case
+__expr55 : (next(n0.c.impl_state.2) & __expr74);
+__expr77 : __expr75;
+TRUE : __expr71;
+esac;
+(__expr76 & __expr80) : case
+__expr54 : __expr78;
+TRUE : __expr81;
+esac;
+(__expr79 & __expr80) : case
+__expr54 : __expr75;
+TRUE : __expr81;
+esac;
+TRUE : __expr71;
+esac ;
+
+DEFINE __expr119 := (__expr8 & n2.p.mem_req.0) ;
+
+DEFINE __expr69 := case
+n0.c.impl_state.0 : next(n0.c.impl_state.0);
+TRUE : __expr64;
+esac ;
+
+DEFINE __expr85 := (n1.c.tag <-> n1.p.eff_addr) ;
+
+DEFINE __expr98 := (__expr96 & __expr97) ;
+
+DEFINE __expr43 := case
+((__expr28 | __expr32) | __expr36) : !SNOOP_RESP.0;
+TRUE : SNOOP_RESP.0;
+esac ;
+
+DEFINE __expr90 := ((__expr88 | __expr89) | __expr31) ;
+
+DEFINE __expr58 := (__expr0 & !n0.p.mem_req.0) ;
+
+DEFINE __expr139 := (__expr132 & __expr138) ;
+
+DEFINE __expr89 := (n1.c.impl_state.2 & __expr47) ;
+
+DEFINE __expr49 := (__expr10 & n2.c.impl_state.0) ;
+
+DEFINE __expr10 := !n2.c.impl_state.1 ;
+
+DEFINE __expr78 := (next(n0.c.impl_state.2) & next(n0.c.impl_state.1)) ;
+
+DEFINE __expr19 := case
+n0.bus_master : case
+BUS_CMD.1 : (__expr13 & case
+BUS_CMD.0 : n0.bus_req.0;
+TRUE : __expr14;
+esac);
+TRUE : (n0.bus_req.1 & case
+BUS_CMD.0 : __expr14;
+TRUE : n0.bus_req.0;
+esac);
+esac;
+n1.bus_master : case
+BUS_CMD.1 : (__expr15 & case
+BUS_CMD.0 : n1.bus_req.0;
+TRUE : __expr16;
+esac);
+TRUE : (n1.bus_req.1 & case
+BUS_CMD.0 : __expr16;
+TRUE : n1.bus_req.0;
+esac);
+esac;
+n2.bus_master : case
+BUS_CMD.1 : (__expr17 & case
+BUS_CMD.0 : n2.bus_req.0;
+TRUE : __expr18;
+esac);
+TRUE : (n2.bus_req.1 & case
+BUS_CMD.0 : __expr18;
+TRUE : n2.bus_req.0;
+esac);
+esac;
+TRUE : (!BUS_CMD.1 & !BUS_CMD.0);
+esac ;
+
+DEFINE __expr135 := (__expr128 & __expr134) ;
+
+DEFINE __expr113 := !__expr85 ;
+
+DEFINE __expr88 := (n1.c.impl_state.2 & __expr87) ;
+
+DEFINE __expr140 := (__expr40 & n2.p.mem_req.1) ;
+
+DEFINE __expr102 := case
+n1.c.impl_state.0 : next(n1.c.impl_state.0);
+TRUE : __expr97;
+esac ;
+
+DEFINE __expr38 := (__expr13 & n0.bus_req.0) ;
+
+DEFINE __expr131 := (next(n2.c.impl_state.2) & __expr130) ;
+
+DEFINE __expr141 := (__expr9 & __expr120) ;
+
+DEFINE __expr68 := (__expr67 & __expr65) ;
+
+DEFINE __expr27 := (__expr25 | __expr26) ;
+
+DEFINE __expr21 := (BUS_CMD.1 & !BUS_CMD.0) ;
+
+DEFINE __expr91 := (__expr4 & !n1.p.mem_req.0) ;
+
+DEFINE __expr52 := (n0.c.tag <-> n0.p.eff_addr) ;
+
+DEFINE __expr32 := ((BUS_ADDR <-> n1.c.tag) & __expr31) ;
+
+DEFINE __expr111 := (next(n1.c.impl_state.2) & next(n1.c.impl_state.1)) ;
+
+DEFINE __expr61 := (__expr59 | (next(n0.p.eff_addr) <-> n0.p.eff_addr)) ;
+
+DEFINE __expr136 := case
+n2.c.impl_state.2 : (next(n2.c.impl_state.2) & case
+n2.c.impl_state.1 : next(n2.c.impl_state.1);
+TRUE : __expr135;
+esac);
+TRUE : (__expr132 & case
+n2.c.impl_state.1 : (next(n2.c.impl_state.1) & __expr134);
+TRUE : __expr135;
+esac);
+esac ;
+
+DEFINE __expr92 := !(((BUS_ADDR <-> n1.c.tag) & __expr51) | !((((__expr85 & __expr86) & __expr31) | ((__expr85 & n1.p.mem_req.1) & __expr90)) | __expr91)) ;
+
+DEFINE __expr74 := (__expr63 & next(n0.c.impl_state.0)) ;
+
+DEFINE __expr62 := case
+(__expr59 & __expr53) : (next(n0.p.register) <-> n0.p.register);
+TRUE : (!(__expr59 & n0.p.mem_req.1) | (next(n0.p.register) <-> n0.c.data));
+esac ;
+
+DEFINE __expr151 := (next(m.data_1) <-> case
+((__expr149 & BUS_ADDR) | ((BUS_CMD.1 & BUS_CMD.0) & BUS_ADDR)) : BUS_DATA;
+TRUE : m.data_1;
+esac) ;
+
+DEFINE __expr20 := (!BUS_CMD.1 & BUS_CMD.0) ;
+
+DEFINE __expr63 := !next(n0.c.impl_state.1) ;
+
+DEFINE __expr137 := case
+__expr34 : __expr133;
+TRUE : __expr136;
+esac ;
+
+DEFINE __expr132 := !next(n2.c.impl_state.2) ;
+
+DEFINE __expr48 := case
+(n1.c.impl_state.2 & n1.c.impl_state.1) : (__expr15 & __expr16);
+__expr47 : (n1.bus_req.1 & __expr16);
+__expr30 : __expr39;
+TRUE : (n1.bus_req.1 & n1.bus_req.0);
+esac ;
+
+DEFINE __expr81 := case
+__expr25 : (__expr67 & (next(n0.c.impl_state.1) & next(n0.c.impl_state.0)));
+TRUE : __expr71;
+esac ;
+
+DEFINE __expr55 := (n0.c.impl_state.2 & __expr54) ;
+
+DEFINE __expr34 := (__expr9 & (n2.c.impl_state.1 & n2.c.impl_state.0)) ;
+
+DEFINE __expr99 := (next(n1.c.impl_state.2) & __expr98) ;
+
+DEFINE __expr101 := (__expr100 & __expr98) ;
+
+DEFINE __expr152 := !next(last_master.1) ;
+
+DEFINE __expr118 := (n2.c.tag <-> n2.p.eff_addr) ;
+
+DEFINE __expr64 := !next(n0.c.impl_state.0) ;
+
+DEFINE __expr130 := (__expr128 & __expr129) ;
+
+DEFINE __expr93 := (__expr92 | case
+n1.p.mem_req.1 : next(n1.p.mem_req.1);
+TRUE : (!next(n1.p.mem_req.1) & case
+n1.p.mem_req.0 : next(n1.p.mem_req.0);
+TRUE : !next(n1.p.mem_req.0);
+esac);
+esac) ;
+
+DEFINE __expr42 := case
+n0.bus_master : (BUS_ADDR <-> case
+__expr38 : n0.c.tag;
+TRUE : n0.p.eff_addr;
+esac);
+n1.bus_master : (BUS_ADDR <-> case
+__expr39 : n1.c.tag;
+TRUE : n1.p.eff_addr;
+esac);
+TRUE : (__expr40 | (BUS_ADDR <-> case
+__expr41 : n2.c.tag;
+TRUE : n2.p.eff_addr;
+esac));
+esac ;
+
+DEFINE __expr39 := (__expr15 & n1.bus_req.0) ;
+
+DEFINE __expr33 := (__expr9 & (n2.c.impl_state.1 & __expr11)) ;
+
+DEFINE __expr94 := (__expr92 | (next(n1.p.eff_addr) <-> n1.p.eff_addr)) ;
+
+DEFINE __expr153 := !next(last_master.0) ;
+
+DEFINE __expr1 := !n0.c.impl_state.2 ;
+
+DEFINE __expr73 := !n0.bus_master ;
+
+DEFINE __expr107 := (__expr96 & next(n1.c.impl_state.0)) ;
+
+DEFINE __expr95 := case
+(__expr92 & __expr86) : (next(n1.p.register) <-> n1.p.register);
+TRUE : (!(__expr92 & n1.p.mem_req.1) | (next(n1.p.register) <-> n1.c.data));
+esac ;
+
+DEFINE __expr144 := !__expr118 ;
+
+DEFINE __expr121 := (n2.c.impl_state.2 & __expr120) ;
+
+DEFINE __expr96 := !next(n1.c.impl_state.1) ;
+
+DEFINE __expr146 := case
+n2.bus_master : case
+(n2.c.impl_state.2 & n2.c.impl_state.1) : __expr131;
+__expr49 : (__expr132 & (next(n2.c.impl_state.1) & __expr129));
+TRUE : __expr137;
+esac;
+((__expr40 & __expr21) & (n2.c.tag <-> BUS_ADDR)) : case
+__expr33 : __expr131;
+TRUE : __expr137;
+esac;
+((__expr40 & __expr20) & (n2.c.tag <-> BUS_ADDR)) : case
+(__expr121 | __expr33) : __expr133;
+__expr122 : __expr139;
+TRUE : __expr137;
+esac;
+(__expr140 & __expr118) : case
+__expr141 : __expr142;
+TRUE : __expr136;
+esac;
+(__expr143 & __expr118) : case
+__expr121 : (next(n2.c.impl_state.2) & __expr138);
+__expr141 : __expr139;
+TRUE : __expr136;
+esac;
+(__expr140 & __expr144) : case
+__expr120 : __expr142;
+TRUE : __expr145;
+esac;
+(__expr143 & __expr144) : case
+__expr120 : __expr139;
+TRUE : __expr145;
+esac;
+TRUE : __expr136;
+esac ;
+
+DEFINE __expr84 := (next(n0.c.tag) <-> case
+((n0.bus_master & __expr21) | (n0.bus_master & __expr20)) : BUS_ADDR;
+TRUE : n0.c.tag;
+esac) ;
+
+DEFINE __expr3 := !n0.c.impl_state.0 ;
+
+DEFINE __expr134 := case
+n2.c.impl_state.0 : next(n2.c.impl_state.0);
+TRUE : __expr129;
+esac ;
+
+DEFINE __expr114 := case
+__expr29 : (__expr100 & (next(n1.c.impl_state.1) & next(n1.c.impl_state.0)));
+TRUE : __expr104;
+esac ;
+
+DEFINE __expr83 := (next(n0.c.data) <-> case
+((__expr25 & __expr52) & __expr53) : n0.p.register;
+(n0.bus_master & __expr51) : BUS_DATA;
+TRUE : n0.c.data;
+esac) ;
+
+DEFINE __expr79 := (__expr73 & __expr53) ;
+
+DEFINE __expr59 := !(((BUS_ADDR <-> n0.c.tag) & __expr51) | !((((__expr52 & __expr53) & __expr27) | ((__expr52 & n0.p.mem_req.1) & (__expr57 | __expr27))) | __expr58)) ;
+
+DEFINE __expr56 := (n0.c.impl_state.2 & __expr45) ;
+
+DEFINE __expr47 := (__expr6 & n1.c.impl_state.0) ;
+
+DEFINE __expr97 := !next(n1.c.impl_state.0) ;
+
+DEFINE __expr28 := ((BUS_ADDR <-> n0.c.tag) & __expr27) ;
+
+DEFINE __expr87 := (__expr6 & __expr7) ;

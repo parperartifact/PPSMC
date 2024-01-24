@@ -1,0 +1,846 @@
+-- Flattened Boolean FSM model  generated from phil.smv
+-- Dumped cwd->layers are: model model_bool determ determ_bool __TempLayer_0 
+
+MODULE main
+-- Input variables from layer 'model'
+
+-- Input variables from layer 'model_bool'
+IVAR
+_process_selector_.3 : boolean;
+_process_selector_.2 : boolean;
+_process_selector_.1 : boolean;
+_process_selector_.0 : boolean;
+
+-- Input variables from layer 'determ'
+-- Input variables from layer 'determ_bool'
+-- Input variables from layer '__TempLayer_0'
+-- State variables from layer 'model'
+
+VAR
+fork0.0 : boolean;
+fork1.0 : boolean;
+fork2.0 : boolean;
+fork3.0 : boolean;
+fork4.0 : boolean;
+fork5.0 : boolean;
+fork6.0 : boolean;
+fork7.0 : boolean;
+fork8.0 : boolean;
+fork9.0 : boolean;
+fork10.0 : boolean;
+fork11.0 : boolean;
+fork12.0 : boolean;
+fork13.0 : boolean;
+phil0.state.0 : boolean;
+phil1.state.0 : boolean;
+phil2.state.0 : boolean;
+phil3.state.0 : boolean;
+phil4.state.0 : boolean;
+phil5.state.0 : boolean;
+phil6.state.0 : boolean;
+phil7.state.0 : boolean;
+phil8.state.0 : boolean;
+phil9.state.0 : boolean;
+phil10.state.0 : boolean;
+phil11.state.0 : boolean;
+phil12.state.0 : boolean;
+phil13.state.0 : boolean;
+
+-- State variables from layer 'determ'
+-- State variables from layer 'determ_bool'
+-- State variables from layer '__TempLayer_0'
+-- Frozen variables from layer 'model'
+-- Frozen variables from layer 'model_bool'
+-- Frozen variables from layer 'determ'
+-- Frozen variables from layer 'determ_bool'
+-- Frozen variables from layer '__TempLayer_0'
+
+INIT
+ __expr0
+
+INIT
+ __expr1
+
+INIT
+ __expr2
+
+INIT
+ __expr3
+
+INIT
+ __expr4
+
+INIT
+ __expr5
+
+INIT
+ __expr6
+
+INIT
+ __expr7
+
+INIT
+ __expr8
+
+INIT
+ __expr9
+
+INIT
+ __expr10
+
+INIT
+ __expr11
+
+INIT
+ __expr12
+
+INIT
+ __expr13
+
+INIT
+ __expr14
+
+INIT
+ __expr15
+
+INIT
+ !phil2.state.0
+
+INIT
+ !phil3.state.0
+
+INIT
+ !phil4.state.0
+
+INIT
+ !phil5.state.0
+
+INIT
+ !phil6.state.0
+
+INIT
+ !phil7.state.0
+
+INIT
+ !phil8.state.0
+
+INIT
+ !phil9.state.0
+
+INIT
+ !phil10.state.0
+
+INIT
+ !phil11.state.0
+
+INIT
+ !phil12.state.0
+
+INIT
+ __expr16
+
+TRANS
+ __expr26
+
+TRANS
+ __expr59
+
+TRANS
+ __expr68
+
+TRANS
+ __expr37
+
+TRANS
+ __expr29
+
+TRANS
+ __expr32
+
+TRANS
+ __expr26
+
+TRANS
+ __expr40
+
+TRANS
+ __expr37
+
+TRANS
+ __expr43
+
+TRANS
+ __expr47
+
+TRANS
+ __expr43
+
+TRANS
+ __expr53
+
+TRANS
+ __expr56
+
+TRANS
+ __expr53
+
+TRANS
+ __expr63
+
+TRANS
+ __expr59
+
+TRANS
+ (__expr17 | (__expr18 | (__expr19 | __expr20)))
+
+TRANS
+ __expr71
+
+TRANS
+ __expr68
+
+TRANS
+ __expr74
+
+TRANS
+ __expr78
+
+TRANS
+ __expr74
+
+TRANS
+ __expr82
+
+TRANS
+ __expr85
+
+TRANS
+ __expr82
+
+TRANS
+ __expr90
+
+TRANS
+ __expr93
+
+TRANS
+ __expr90
+
+TRANS
+ __expr98
+
+TRANS
+ __expr101
+
+TRANS
+ __expr98
+
+TRANS
+ __expr104
+
+TRANS
+ __expr108
+
+TRANS
+ __expr104
+
+TRANS
+ __expr113
+
+TRANS
+ __expr116
+
+TRANS
+ __expr113
+
+TRANS
+ __expr119
+
+TRANS
+ __expr123
+
+TRANS
+ __expr119
+
+TRANS
+ case
+(__expr22 | __expr120) : case
+__expr13 : next(fork13.0);
+fork13.0 : __expr124;
+TRUE : __expr125;
+esac;
+TRUE : __expr125;
+esac
+
+TRANS
+ __expr29
+
+TRANS
+ __expr40
+
+TRANS
+ __expr47
+
+TRANS
+ __expr56
+
+TRANS
+ __expr63
+
+TRANS
+ __expr71
+
+TRANS
+ __expr78
+
+TRANS
+ __expr85
+
+TRANS
+ __expr93
+
+TRANS
+ __expr101
+
+TRANS
+ __expr108
+
+TRANS
+ __expr116
+
+TRANS
+ __expr123
+
+TRANS
+ __expr32
+
+
+LTLSPEC
+ G (__expr14 | (__expr15 & __expr16))
+
+-- Symbols introduced by the dumper:
+DEFINE __expr107 := case
+phil10.state.0 : next(phil10.state.0);
+TRUE : __expr106;
+esac ;
+
+DEFINE __expr90 := case
+(__expr87 | __expr79) : case
+__expr8 : next(fork8.0);
+fork8.0 : __expr88;
+TRUE : __expr89;
+esac;
+TRUE : __expr89;
+esac ;
+
+DEFINE __expr84 := case
+phil7.state.0 : next(phil7.state.0);
+TRUE : __expr83;
+esac ;
+
+DEFINE __expr22 := (_process_selector_.3 & (__expr18 & __expr21)) ;
+
+DEFINE __expr95 := (_process_selector_.3 & __expr94) ;
+
+DEFINE __expr68 := case
+(__expr65 | __expr60) : case
+__expr5 : next(fork5.0);
+fork5.0 : __expr66;
+TRUE : __expr67;
+esac;
+TRUE : __expr67;
+esac ;
+
+DEFINE __expr37 := case
+(__expr34 | __expr23) : case
+__expr1 : next(fork1.0);
+fork1.0 : __expr35;
+TRUE : __expr36;
+esac;
+TRUE : __expr36;
+esac ;
+
+DEFINE __expr117 := !next(fork12.0) ;
+
+DEFINE __expr66 := !next(fork5.0) ;
+
+DEFINE __expr35 := !next(fork1.0) ;
+
+DEFINE __expr116 := case
+__expr110 : case
+((!phil11.state.0 & __expr11) & __expr12) : next(phil11.state.0);
+phil11.state.0 : __expr114;
+TRUE : __expr115;
+esac;
+TRUE : __expr115;
+esac ;
+
+DEFINE __expr32 := case
+__expr22 : case
+((__expr16 & __expr13) & __expr0) : next(phil13.state.0);
+phil13.state.0 : __expr30;
+TRUE : __expr31;
+esac;
+TRUE : __expr31;
+esac ;
+
+DEFINE __expr89 := case
+fork8.0 : next(fork8.0);
+TRUE : __expr88;
+esac ;
+
+DEFINE __expr113 := case
+(__expr110 | __expr105) : case
+__expr11 : next(fork11.0);
+fork11.0 : __expr111;
+TRUE : __expr112;
+esac;
+TRUE : __expr112;
+esac ;
+
+DEFINE __expr3 := !fork3.0 ;
+
+DEFINE __expr111 := !next(fork11.0) ;
+
+DEFINE __expr57 := !next(fork4.0) ;
+
+DEFINE __expr76 := !next(phil6.state.0) ;
+
+DEFINE __expr56 := case
+__expr50 : case
+((!phil3.state.0 & __expr3) & __expr4) : next(phil3.state.0);
+phil3.state.0 : __expr54;
+TRUE : __expr55;
+esac;
+TRUE : __expr55;
+esac ;
+
+DEFINE __expr45 := !next(phil2.state.0) ;
+
+DEFINE __expr92 := case
+phil8.state.0 : next(phil8.state.0);
+TRUE : __expr91;
+esac ;
+
+DEFINE __expr70 := case
+phil5.state.0 : next(phil5.state.0);
+TRUE : __expr69;
+esac ;
+
+DEFINE __expr39 := case
+phil1.state.0 : next(phil1.state.0);
+TRUE : __expr38;
+esac ;
+
+DEFINE __expr5 := !fork5.0 ;
+
+DEFINE __expr53 := case
+(__expr50 | __expr44) : case
+__expr3 : next(fork3.0);
+fork3.0 : __expr51;
+TRUE : __expr52;
+esac;
+TRUE : __expr52;
+esac ;
+
+DEFINE __expr87 := (__expr17 & (_process_selector_.2 & __expr86)) ;
+
+DEFINE __expr10 := !fork10.0 ;
+
+DEFINE __expr102 := !next(fork10.0) ;
+
+DEFINE __expr51 := !next(fork3.0) ;
+
+DEFINE __expr121 := !next(phil12.state.0) ;
+
+DEFINE __expr101 := case
+__expr95 : case
+((!phil9.state.0 & __expr9) & __expr10) : next(phil9.state.0);
+phil9.state.0 : __expr99;
+TRUE : __expr100;
+esac;
+TRUE : __expr100;
+esac ;
+
+DEFINE __expr115 := case
+phil11.state.0 : next(phil11.state.0);
+TRUE : __expr114;
+esac ;
+
+DEFINE __expr98 := case
+(__expr95 | __expr87) : case
+__expr9 : next(fork9.0);
+fork9.0 : __expr96;
+TRUE : __expr97;
+esac;
+TRUE : __expr97;
+esac ;
+
+DEFINE __expr31 := case
+phil13.state.0 : next(phil13.state.0);
+TRUE : __expr30;
+esac ;
+
+DEFINE __expr96 := !next(fork9.0) ;
+
+DEFINE __expr61 := !next(phil4.state.0) ;
+
+DEFINE __expr16 := !phil13.state.0 ;
+
+DEFINE __expr48 := (__expr19 & _process_selector_.0) ;
+
+DEFINE __expr4 := !fork4.0 ;
+
+DEFINE __expr55 := case
+phil3.state.0 : next(phil3.state.0);
+TRUE : __expr54;
+esac ;
+
+DEFINE __expr125 := case
+fork13.0 : next(fork13.0);
+TRUE : __expr124;
+esac ;
+
+DEFINE __expr27 := !next(phil0.state.0) ;
+
+DEFINE __expr18 := !_process_selector_.2 ;
+
+DEFINE __expr106 := !next(phil10.state.0) ;
+
+DEFINE __expr6 := !fork6.0 ;
+
+DEFINE __expr83 := !next(phil7.state.0) ;
+
+DEFINE __expr21 := (__expr19 & __expr20) ;
+
+DEFINE __expr100 := case
+phil9.state.0 : next(phil9.state.0);
+TRUE : __expr99;
+esac ;
+
+DEFINE __expr11 := !fork11.0 ;
+
+DEFINE __expr20 := !_process_selector_.0 ;
+
+DEFINE __expr88 := !next(fork8.0) ;
+
+DEFINE __expr64 := (__expr18 & __expr48) ;
+
+DEFINE __expr33 := (__expr18 & (_process_selector_.1 & _process_selector_.0)) ;
+
+DEFINE __expr25 := case
+fork0.0 : next(fork0.0);
+TRUE : __expr24;
+esac ;
+
+DEFINE __expr81 := case
+fork7.0 : next(fork7.0);
+TRUE : __expr80;
+esac ;
+
+DEFINE __expr91 := !next(phil8.state.0) ;
+
+DEFINE __expr69 := !next(phil5.state.0) ;
+
+DEFINE __expr38 := !next(phil1.state.0) ;
+
+DEFINE __expr109 := (_process_selector_.2 & __expr21) ;
+
+DEFINE __expr86 := (_process_selector_.1 & __expr20) ;
+
+DEFINE __expr7 := !fork7.0 ;
+
+DEFINE __expr78 := case
+__expr75 : case
+((!phil6.state.0 & __expr6) & __expr7) : next(phil6.state.0);
+phil6.state.0 : __expr76;
+TRUE : __expr77;
+esac;
+TRUE : __expr77;
+esac ;
+
+DEFINE __expr47 := case
+__expr44 : case
+((!phil2.state.0 & __expr2) & __expr3) : next(phil2.state.0);
+phil2.state.0 : __expr45;
+TRUE : __expr46;
+esac;
+TRUE : __expr46;
+esac ;
+
+DEFINE __expr73 := case
+fork6.0 : next(fork6.0);
+TRUE : __expr72;
+esac ;
+
+DEFINE __expr42 := case
+fork2.0 : next(fork2.0);
+TRUE : __expr41;
+esac ;
+
+DEFINE __expr12 := !fork12.0 ;
+
+DEFINE __expr114 := !next(phil11.state.0) ;
+
+DEFINE __expr30 := !next(phil13.state.0) ;
+
+DEFINE __expr74 := case
+__expr64 : case
+__expr6 : next(fork6.0);
+fork6.0 : __expr72;
+TRUE : __expr73;
+esac;
+TRUE : __expr73;
+esac ;
+
+DEFINE __expr43 := case
+__expr33 : case
+__expr2 : next(fork2.0);
+fork2.0 : __expr41;
+TRUE : __expr42;
+esac;
+TRUE : __expr42;
+esac ;
+
+DEFINE __expr79 := (_process_selector_.3 & (_process_selector_.2 & _process_selector_.1)) ;
+
+DEFINE __expr49 := (_process_selector_.2 & __expr48) ;
+
+DEFINE __expr14 := !phil0.state.0 ;
+
+DEFINE __expr123 := case
+__expr120 : case
+((!phil12.state.0 & __expr12) & __expr13) : next(phil12.state.0);
+phil12.state.0 : __expr121;
+TRUE : __expr122;
+esac;
+TRUE : __expr122;
+esac ;
+
+DEFINE __expr118 := case
+fork12.0 : next(fork12.0);
+TRUE : __expr117;
+esac ;
+
+DEFINE __expr67 := case
+fork5.0 : next(fork5.0);
+TRUE : __expr66;
+esac ;
+
+DEFINE __expr36 := case
+fork1.0 : next(fork1.0);
+TRUE : __expr35;
+esac ;
+
+DEFINE __expr119 := case
+__expr109 : case
+__expr12 : next(fork12.0);
+fork12.0 : __expr117;
+TRUE : __expr118;
+esac;
+TRUE : __expr118;
+esac ;
+
+DEFINE __expr54 := !next(phil3.state.0) ;
+
+DEFINE __expr124 := !next(fork13.0) ;
+
+DEFINE __expr94 := (__expr18 & __expr86) ;
+
+DEFINE __expr1 := !fork1.0 ;
+
+DEFINE __expr75 := (__expr17 & __expr64) ;
+
+DEFINE __expr44 := (__expr17 & __expr33) ;
+
+DEFINE __expr19 := !_process_selector_.1 ;
+
+DEFINE __expr112 := case
+fork11.0 : next(fork11.0);
+TRUE : __expr111;
+esac ;
+
+DEFINE __expr63 := case
+__expr60 : case
+((!phil4.state.0 & __expr4) & __expr5) : next(phil4.state.0);
+phil4.state.0 : __expr61;
+TRUE : __expr62;
+esac;
+TRUE : __expr62;
+esac ;
+
+DEFINE __expr58 := case
+fork4.0 : next(fork4.0);
+TRUE : __expr57;
+esac ;
+
+DEFINE __expr99 := !next(phil9.state.0) ;
+
+DEFINE __expr77 := case
+phil6.state.0 : next(phil6.state.0);
+TRUE : __expr76;
+esac ;
+
+DEFINE __expr46 := case
+phil2.state.0 : next(phil2.state.0);
+TRUE : __expr45;
+esac ;
+
+DEFINE __expr120 := (__expr17 & __expr109) ;
+
+DEFINE __expr59 := case
+__expr49 : case
+__expr4 : next(fork4.0);
+fork4.0 : __expr57;
+TRUE : __expr58;
+esac;
+TRUE : __expr58;
+esac ;
+
+DEFINE __expr29 := case
+__expr23 : case
+((__expr14 & __expr0) & __expr1) : next(phil0.state.0);
+phil0.state.0 : __expr27;
+TRUE : __expr28;
+esac;
+TRUE : __expr28;
+esac ;
+
+DEFINE __expr8 := !fork8.0 ;
+
+DEFINE __expr65 := (_process_selector_.3 & __expr64) ;
+
+DEFINE __expr34 := (_process_selector_.3 & __expr33) ;
+
+DEFINE __expr13 := !fork13.0 ;
+
+DEFINE __expr26 := case
+(__expr22 | __expr23) : case
+__expr0 : next(fork0.0);
+fork0.0 : __expr24;
+TRUE : __expr25;
+esac;
+TRUE : __expr25;
+esac ;
+
+DEFINE __expr0 := !fork0.0 ;
+
+DEFINE __expr108 := case
+__expr105 : case
+((!phil10.state.0 & __expr10) & __expr11) : next(phil10.state.0);
+phil10.state.0 : __expr106;
+TRUE : __expr107;
+esac;
+TRUE : __expr107;
+esac ;
+
+DEFINE __expr103 := case
+fork10.0 : next(fork10.0);
+TRUE : __expr102;
+esac ;
+
+DEFINE __expr85 := case
+__expr79 : case
+((!phil7.state.0 & __expr7) & __expr8) : next(phil7.state.0);
+phil7.state.0 : __expr83;
+TRUE : __expr84;
+esac;
+TRUE : __expr84;
+esac ;
+
+DEFINE __expr52 := case
+fork3.0 : next(fork3.0);
+TRUE : __expr51;
+esac ;
+
+DEFINE __expr122 := case
+phil12.state.0 : next(phil12.state.0);
+TRUE : __expr121;
+esac ;
+
+DEFINE __expr24 := !next(fork0.0) ;
+
+DEFINE __expr15 := !phil1.state.0 ;
+
+DEFINE __expr104 := case
+__expr94 : case
+__expr10 : next(fork10.0);
+fork10.0 : __expr102;
+TRUE : __expr103;
+esac;
+TRUE : __expr103;
+esac ;
+
+DEFINE __expr110 := (_process_selector_.3 & __expr109) ;
+
+DEFINE __expr82 := case
+(__expr79 | __expr75) : case
+__expr7 : next(fork7.0);
+fork7.0 : __expr80;
+TRUE : __expr81;
+esac;
+TRUE : __expr81;
+esac ;
+
+DEFINE __expr60 := (__expr17 & __expr49) ;
+
+DEFINE __expr80 := !next(fork7.0) ;
+
+DEFINE __expr23 := (__expr17 & (_process_selector_.2 & (_process_selector_.1 & _process_selector_.0))) ;
+
+DEFINE __expr97 := case
+fork9.0 : next(fork9.0);
+TRUE : __expr96;
+esac ;
+
+DEFINE __expr2 := !fork2.0 ;
+
+DEFINE __expr62 := case
+phil4.state.0 : next(phil4.state.0);
+TRUE : __expr61;
+esac ;
+
+DEFINE __expr105 := (__expr17 & __expr94) ;
+
+DEFINE __expr50 := (_process_selector_.3 & __expr49) ;
+
+DEFINE __expr28 := case
+phil0.state.0 : next(phil0.state.0);
+TRUE : __expr27;
+esac ;
+
+DEFINE __expr72 := !next(fork6.0) ;
+
+DEFINE __expr41 := !next(fork2.0) ;
+
+DEFINE __expr93 := case
+__expr87 : case
+((!phil8.state.0 & __expr8) & __expr9) : next(phil8.state.0);
+phil8.state.0 : __expr91;
+TRUE : __expr92;
+esac;
+TRUE : __expr92;
+esac ;
+
+DEFINE __expr17 := !_process_selector_.3 ;
+
+DEFINE __expr71 := case
+__expr65 : case
+((!phil5.state.0 & __expr5) & __expr6) : next(phil5.state.0);
+phil5.state.0 : __expr69;
+TRUE : __expr70;
+esac;
+TRUE : __expr70;
+esac ;
+
+DEFINE __expr40 := case
+__expr34 : case
+((__expr15 & __expr1) & __expr2) : next(phil1.state.0);
+phil1.state.0 : __expr38;
+TRUE : __expr39;
+esac;
+TRUE : __expr39;
+esac ;
+
+DEFINE __expr9 := !fork9.0 ;
+
